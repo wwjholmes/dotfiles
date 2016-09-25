@@ -1,0 +1,125 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    customFileTypes:
+      "source.cpp": [
+        "h"
+      ]
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "TARGETS"
+        "cconf"
+        "cinc"
+        "mcconf"
+        "tw"
+        "BUCK"
+        "ctw"
+      ]
+    disabledPackages: [
+      "deprecation-cop"
+      "metrics"
+      "styleguide"
+      "timecop"
+      "fuzzy-finder"
+      "nuclide-hack"
+      "tree-view"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+    lineHeight: 1.25
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "06f644d9-ed28-ea20-9afe-4d8d0b3ac442"
+  "language-babel": {}
+  linter: {}
+  "markdown-preview":
+    breakOnSingleNewline: true
+  nuclide:
+    "fb-login": {}
+    "fb-nuclide-installer":
+      notifyMigrationTime: 1444449439476
+    installRecommendedPackages: true
+    "nuclide-adb-logcat": {}
+    "nuclide-arcanist":
+      blacklistedLinters: [
+        "FBHACK"
+        "PEP8"
+        "FLAKE8"
+        "FBFLOW FBRELAYFLOW"
+        "FBFLOW"
+        "FBRELAYFLOW"
+      ]
+    "nuclide-bookshelf":
+      changeActiveBookmarkBehavior: "Always Ignore"
+    "nuclide-buck": {}
+    "nuclide-buck-files": {}
+    "nuclide-console": {}
+    "nuclide-datatip": {}
+    "nuclide-diff-view":
+      toolbarVisible: true
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health":
+      toolbarJewel: "None"
+    "nuclide-home":
+      showHome: false
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-output": {}
+    "nuclide-python": {}
+    "nuclide-react-native": {}
+    "nuclide-remote-projects":
+      connectionProfiles: [
+        {
+          deletable: true
+          displayTitle: "www"
+          params:
+            displayTitle: "www"
+            username: "wenjingw"
+            server: "our.wenjingw.sb.facebook.com"
+            cwd: "/data/users/wenjingw/www-hg"
+            sshPort: "22"
+            authMethod: "PRIVATE_KEY"
+            pathToPrivateKey: "/Users/wenjingw/.ssh/fb_id_rsa"
+            remoteServerCommand: ""
+          saveable: true
+        }
+        {
+          deletable: true
+          displayTitle: "dataswarm-hg"
+          params:
+            displayTitle: "dataswarm-hg"
+            username: "wenjingw"
+            server: "our.wenjingw.sb.facebook.com"
+            cwd: "/data/users/wenjingw/dataswarm-hg"
+            sshPort: "22"
+            authMethod: "PRIVATE_KEY"
+            pathToPrivateKey: "/Users/wenjingw/.ssh/fb_id_rsa"
+            remoteServerCommand: ""
+          saveable: true
+        }
+      ]
+      shutdownServerAfterDisconnection: false
+    "nuclide-swift": {}
+    "nuclide-working-sets": {}
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
+  welcome:
+    showOnStartup: false

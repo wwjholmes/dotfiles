@@ -1,0 +1,10 @@
+js:
+  title: "Js"
+  paths: [
+    "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js"
+  ]
+adsmanager:
+  title: "Ads Manager"
+  paths: [
+    "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager"
+  ]
