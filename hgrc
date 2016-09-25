@@ -1,0 +1,55 @@
+# example config (see "hg help config" for more info)
+
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+# pager =
+# progress =
+# color =
+hgext.extdiff =
+
+[extdiff]
+#cmd.diffmerge = diffmerge
+cmd.opendiff = opendiff-w
+
+[merge-tools]
+filemerge.executable = opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output
+#diffmerge.executable = diffmerge
+#diffmerge.args = -merge -result=$output -t1="Local Version" -t2=$output -t3="Other Version" -caption=$output $local $base $other
+#diffmerge.binary = False
+#diffmerge.symlinks = False
+#diffmerge.gui = True
+
+[merge-patterns]
+re:.*\/generated\/.* = internal:fail
+re:.*\/Announcers\/.*= internal:fail
+re:.*\/Libraries\/FBDataModel\/FBDataModel\/.*=internal:fail
+re:.*\/Libraries\/FBGraphQL\/FBGraphQL\/MutationInputs\/.*=internal:fail
+**.js = filemerge
+**.plist = filemerge
+**.h = filemerge
+**.m = filemerge
+**.mm = filemerge
+#**.graphql = diffmerge
+**.exe = internal:fail
+
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = Wenjing Wang <wenjingw@fb.com>
+
+[alias]
+
+st  = status re:
+rema = rebase -d master
+ht = histedit
+hc = histedit --continue
+ha = histedit --abort
+cl = resolve -l
+cm = resolve -m
+rc = rebase --continue
+ra = rebase --abort
+sc = status --change
+

@@ -30,5 +30,10 @@
       "commentStart": "{/* ",
       "commentEnd": " */}"
     }
+  },
+  ".graphql": {
+    "editor": {
+      "commentStart": "# "
+    }
   }
 }

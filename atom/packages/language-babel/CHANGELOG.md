@@ -1,3 +1,63 @@
+### 2.42.0
+  - Add support for embedding other grammars to highlight template literals. Please refer to [the README](https://github.com/gandm/language-babel#javascript-tagged-template-literal-grammar-extensions)
+
+### 2.41.0
+  - Add references in README to `language-graphql-lb` that supports `.graphql` and `.gql` files.
+
+### 2.40.0
+  - Add support for `/* GraphQL */` to be used as a prefix to templates literals enclosing GraphQL. See the README for more info.
+
+### 2.39.0
+  - Add internal support for GraphQL templates so as to better support it.
+
+### 2.38.0
+  - Change ES decorator support that conforms to the new spec and also better supports ASI syntax.
+
+### 2.37.1
+  - Add fixes for classes where public class fields mixed typed and non-typed implementations.
+  - Add support for autoIndentJSX where a return statement becomes an implicit else statement.
+  - Add scope for `|` in flow's object 'only' syntax `{| prop: string |}`
+
+### 2.37.0
+  - Add support for GraphQL template strings with tags of Relay.QL and gql. Also support # type comments
+  - Add Additional scope class id for literal object shorthand properties. `.shorthandpropertyname`
+
+### 2.36.3
+  - Fix auto indent JSX when using hard tabs and certain eslint rules
+  - Fix top most closing tag suggestions displaying wrong option when  multiple open tags were on line.
+
+### 2.36.2
+  - Change Indent JSX behaviour of ternary else. [Issue 241](https://github.com/gandm/language-babel/issues/241)
+
+### 2.36.1
+  - Change flow predicate syntax to use %checks rather than checks.
+  - Fix class field property assignments causing following async keyword to be incorrectly highlighted  [Issue 238](https://github.com/gandm/language-babel/issues/238)
+  - Fix certain keywords being interpreted as a tagname for template literals.  [Issue 240](https://github.com/gandm/language-babel/issues/240)
+
+### 2.36.0
+  - Add autoIndentJSX support to inline switch/case/default and for/while loops.
+  - Refactor more grammar to use the more robust JS identifier regex.
+
+### 2.35.0
+  - Atom's reflow command expects whitespace prefixing a // comment to have a scopeName! [Issue 234](https://github.com/gandm/language-babel/issues/234)
+
+### 2.34.0
+  - Add autoIndentJSX support for inline IIFE that uses if/else. [Issue 230](https://github.com/gandm/language-babel/issues/230)
+  - Allow void keyword as possible code that precedes JSX
+  - Scope classname.methodcall() that use uppercase class as CONSTANT.methodcall(). [Issue 229](https://github.com/gandm/language-babel/issues/229)
+  - Add const & var as implicit options on export grammar.
+
+### 2.33.0
+  - Add support for flow predicates using checks keyword.
+  - Improve handling of flow declarations
+
+### 2.32.4
+  - Fix flow type vars holding functions that are defined with generics not parsing correctly in grammar.
+
+### 2.32.3
+  - Changed some grammar regex's that scoped prefixed space as part of following token.
+  - Fixed JSX auto newline insertion/indent when used with hard tabs and without autoIndentJSX.
+
 ### 2.32.2
   - Allow comments inside import statement braces. Fixes [Issue 222](https://github.com/gandm/language-babel/issues/222)
 

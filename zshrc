@@ -168,7 +168,7 @@ alias hglog7="hg log -r 'last(::. & not date(-7))'"
 
 alias highlightjs="pbpaste | highlight --syntax js --style monokai --out-format rtf --font monaco --font-size 26 | pbcopy"
 alias highlightobjc="pbpaste | highlight --syntax objc --style monokai --out-format rtf --font monaco --font-size 26 | pbcopy"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # added by setup_fb4a.sh
 export FB_OBJC="~/fbsource/fbobjc"
