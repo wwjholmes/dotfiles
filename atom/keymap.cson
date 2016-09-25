@@ -24,7 +24,10 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 'atom-workspace':
-  'ctrl-shift-w': 'tabs:close-all-tabs'
+  'shift-cmd-W': 'tabs:close-all-tabs'
+
+'body':
+  'ctrl-shift-w': 'window:close'
 
 'atom-text-editor':
   'cmd-shift-down': 'git-diff:move-to-next-diff'
