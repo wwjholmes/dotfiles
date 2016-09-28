@@ -170,6 +170,12 @@ alias highlightjs="pbpaste | highlight --syntax js --style monokai --out-format 
 alias highlightobjc="pbpaste | highlight --syntax objc --style monokai --out-format rtf --font monaco --font-size 26 | pbcopy"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+#JS Pyramidion
+export FBOBJC=~/fbsource/fbobjc/
+export I_JSBUDDY_HOME=$FBOBJC/EndToEndTests/Pyramdion/
+export FBANDROID=~/fbsource/fbandroid/
+export A_JSBUDDY_HOME=$FBANDROID/java/com/facebook/testing/buddy/js/
+
 # added by setup_fb4a.sh
 export FB_OBJC="~/fbsource/fbobjc"
 export ANDROID_SDK=/opt/android_sdk

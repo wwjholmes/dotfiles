@@ -1,10 +1,25 @@
-js:
-  title: "Js"
-  paths: [
-    "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js"
-  ]
-adsmanager:
-  title: "Ads Manager"
-  paths: [
-    "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager"
-  ]
+[
+  {
+    title: "Js"
+    group: ""
+    paths: [
+      "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js"
+    ]
+    icon: "icon-chevron-right"
+    settings: {}
+    devMode: false
+    template: null
+  }
+  {
+    title: "Ads Manager"
+    group: ""
+    paths: [
+      "/Users/wenjingw/fbsource/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager"
+      "/Users/wenjingw/fbsource/fbandroid/java/com/facebook/testing/buddy/js/facebook/adsmanager"
+    ]
+    icon: "icon-chevron-right"
+    settings: {}
+    devMode: false
+    template: null
+  }
+]
