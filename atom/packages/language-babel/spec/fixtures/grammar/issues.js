@@ -1,5 +1,26 @@
 // SYNTAX TEST "source.js.jsx"
 
+// ISSUE #256
+let obj = {
+  nested: {
+    async bar() {
+//  ^^^^^ ^^^^^    meta.function.method.js
+//  ^^^^^          storage.type.js
+//        ^^^      entity.name.function.method.js
+//           ^     punctuation.definition.parameters.begin.js
+//            ^    punctuation.definition.parameters.end.js
+//              ^  meta.brace.curly.js
+      await 1;
+    }
+  }
+}
+
+// ISSUE #255
+let a=1
+ / 2
+ // <- keyword.operator.arithmetic.js
+// ^  constant.numeric.js
+
 // ISSUE #234
 
  // Comment one a new line with some prefixed white space

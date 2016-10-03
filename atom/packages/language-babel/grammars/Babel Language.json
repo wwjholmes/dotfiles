@@ -390,6 +390,7 @@
             "1": { "name": "meta.brace.square.js" }
           },
           "patterns": [
+            { "include": "#literal-object-brace" },
             { "include": "#expression" }
           ]
         }
@@ -715,32 +716,63 @@
       ]
     },
     "literal-object": {
+      "comment": "obj lteral ({ or ,{ or [{ or ={ or return { or default {",
+      "begin": "(?:(?<=\\(|\\[)|(?:\\s*(?:(=)|\\b(default)\\b|\\b(return)\\b|(,))))\\s*({)",
+      "end": "\\s*+(})",
+      "beginCaptures": {
+        "1": { "name": "keyword.operator.assignment.js" },
+        "2": { "name": "keyword.control.module.js" },
+        "3": { "name": "keyword.control.flow.js" },
+        "4": { "name": "meta.delimiter.comma.js" },
+        "5": { "name": "meta.brace.curly.js" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.brace.curly.js" }
+      },
       "patterns": [
-        { "comment": "obj lteral ({ or ,{ or [{ or ={ or return { or default {",
-          "begin": "(?:(?<=\\(|\\[)|(?:\\s*(?:(=)|\\b(default)\\b|\\b(return)\\b|(,))))\\s*({)",
-          "end": "\\s*+(})",
-          "beginCaptures": {
-            "1": { "name": "keyword.operator.assignment.js" },
-            "2": { "name": "keyword.control.module.js" },
-            "3": { "name": "keyword.control.flow.js" },
-            "4": { "name": "meta.delimiter.comma.js" },
-            "5": { "name": "meta.brace.curly.js" }
-          },
-          "endCaptures": {
-            "1": { "name": "meta.brace.curly.js" }
-          },
-          "patterns": [
-            { "include": "#html-template" },
-            { "include": "#literal-function-labels" },
-            { "include": "#literal-arrow-function-labels" },
-            { "include": "#literal-arrow-function" },
-            { "include": "#literal-method" },
-            { "include": "#literal-object-prop-shorthand" },
-            { "include": "#literal-labels" },
-            { "include": "#expression" },
-            { "include": "#literal-punctuation" }
-          ]
-        }
+        { "include": "#literal-object-body" }
+      ]
+    },
+    "literal-object-brace": {
+      "comment": "nested obj literal found inside other objects like arrays",
+      "begin": "\\s*({)",
+      "end": "\\s*+(})",
+      "beginCaptures": {
+        "1": { "name": "meta.brace.curly.js" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.brace.curly.js" }
+      },
+      "patterns": [
+        { "include": "#literal-object-body" }
+      ]
+    },
+    "literal-object-brace-property": {
+      "comment": "nested obj literal key: {object} ",
+      "begin": "(?<=:)\\s*({)",
+      "end": "\\s*+(})",
+      "beginCaptures": {
+        "1": { "name": "meta.brace.curly.js" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.brace.curly.js" }
+      },
+      "patterns": [
+        { "include": "#literal-object-body" }
+      ]
+    },
+    "literal-object-body": {
+      "patterns": [
+        { "include": "#html-template" },
+        { "include": "#literal-object-brace-property" },
+        { "include": "#literal-function-labels" },
+        { "include": "#literal-arrow-function-labels" },
+        { "include": "#literal-arrow-function" },
+        { "include": "#literal-method" },
+        { "include": "#literal-object-prop-shorthand" },
+        { "include": "#literal-labels" },
+        { "include": "#expression" },
+        { "include": "#literal-punctuation" }
       ]
     },
     "literal-object-prop-shorthand": {
@@ -1492,7 +1524,7 @@
       "patterns": [
         {
           "name": "string.regexp.js",
-          "begin": "(?<=\\.|\\(|,|{|}|\\[|;|,|<|>|<=|>=|==|!=|===|!==|\\+|-|\\*|%|\\+\\+|--|<<|>>|>>>|&|\\||\\^|!|~|&&|\\|\\||\\?|:|=|\\+=|-=|\\*=|%=|<<=|>>=|>>>=|&=|\\|=|\\^=|/|/=|\\Wnew|\\Wdelete|\\Wvoid|\\Wtypeof|\\Winstanceof|\\Win|\\Wdo|\\Wreturn|\\Wcase|\\Wthrow|^new|^delete|^void|^typeof|^instanceof|^in|^do|^return|^case|^throw|^)\\s*+(/)(?!/|\\*|$)",
+          "begin": "(?<=^|\\.|\\(|,|{|}|\\[|;|,|<|>|<=|>=|==|!=|===|!==|\\+|-|\\*|%|\\+\\+|--|<<|>>|>>>|&|\\||\\^|!|~|&&|\\|\\||\\?|:|=|\\+=|-=|\\*=|%=|<<=|>>=|>>>=|&=|\\|=|\\^=|/|/=|\\Wnew|\\Wdelete|\\Wvoid|\\Wtypeof|\\Winstanceof|\\Win|\\Wdo|\\Wreturn|\\Wcase|\\Wthrow|^new|^delete|^void|^typeof|^instanceof|^in|^do|^return|^case|^throw)\\s*+(/)(?!\\*|/)(?=.*/[gimuy]*\\s*($|[,;)}\\]]|\\.[$_A-Za-z]))",
           "end": "(/)([gimyu]*)",
           "beginCaptures": {
             "1": { "name": "punctuation.definition.string.begin.js" }
