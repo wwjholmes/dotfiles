@@ -22,6 +22,7 @@
         "tw"
         "BUCK"
         "ctw"
+        "thrift-cvalidator"
       ]
     disabledPackages: [
       "deprecation-cop"
@@ -38,7 +39,6 @@
       "one-dark-syntax"
     ]
   editor:
-    fontSize: 13
     invisibles: {}
     lineHeight: 1.25
     showIndentGuide: true

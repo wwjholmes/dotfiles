@@ -90,8 +90,7 @@ alias remotePro1='sudo cperun -t chef'
 alias remotePro2='ssh -L 5901:wenjingw-pro.dhcp.thefacebook.com:5900 wenjingw@wenjingw-pro.dhcp.thefacebook.com'
 alias remotePro3='open vnc://localhost:5901'
 #alias dev1='ssh dev2064.prn2.facebook.com'
-alias dev1='ssh devvm15778.prn1.facebook.com'
-alias dev2='ssh dev6268.prn2.facebook.com'
+alias dev1='ssh devvm22394.prn1.facebook.com'
 alias arcdiff='cd ~/fbsource && arc diff'
 alias arcdepends='arc detect-depends'
 alias arcpatch-s='arc newpatch --skip-dependencies'
@@ -129,12 +128,14 @@ alias buckiosmadman='buck install -r adsmanager'
 alias buckiosmadmandevice="buck install -r adsmanager#iphoneos-armv7"
 alias buckandroidmadman='buck install -r adsmanager'
 alias buckiosmadman_6="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6'"
+alias buckiosmadman_6s="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s'"
 alias buckiosmadman_6plus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6 Plus'"
+alias buckiosmadman_6splus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s Plus'"
 
-alias rnios.sh='~/fbobjc/Libraries/FBReactKit/fbrnios.sh'
-alias rnandroid.sh='~/fbobjc/Libraries/FBReactKit/fbrnandroid.sh'
-alias randroid='~/fbandroid/java/com/facebook/catalyst/runServerHere.sh'
-alias rios='~/fbobjc/Libraries/FBReactKit/runServerHere.sh'
+alias rnios.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnios.sh'
+alias rnandroid.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnandroid.sh'
+alias randroid='~/fbsource/fbandroid/java/com/facebook/catalyst/runServerHere.sh'
+alias rios='~/fbsource/fbobjc/Libraries/FBReactKit/runServerHere.sh'
 
 #fjs-fbobjc -r wenjingw.sb.facebook.com relay-fb
 alias fjs-fbobjc='~/fbobjc/Libraries/FBReactKit/js/scripts/.fjs-fbobjc.sh'
@@ -147,8 +148,8 @@ alias node-check-install='node ~/fbobjc/Libraries/FBReactKit/js/nodeModules.js c
 #ama
 alias reverseadb='adb reverse tcp:8081 tcp:8081'
 alias adblogcat='adb logcat'
-alias jt='~/fbobjc/Libraries/FBReactKit/jest --no-watchman'
-alias jtadsmanager='~/fbobjc/Libraries/FBReactKit/jest --no-watchman ~/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager'
+alias jt='~/fbsource/fbobjc/Libraries/FBReactKit/jest --no-watchman'
+alias jtadsmanager='~/fbsource/fbobjc/Libraries/FBReactKit/jest --no-watchman ~/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager'
 alias flowmadman='flow ~/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/AdsManager'
 alias flowpg='flow check ~/fbobjc/Libraries/FBReactKit/js/RKJSModules/Apps/Playground'
 alias cdandroidjs='cd ~/fbandroid/java/com/facebook/catalyst/js'
