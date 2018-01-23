@@ -93,7 +93,8 @@ alias remotePro3='open vnc://localhost:5901'
 #alias dev1='ssh dev2064.prn2.facebook.com'
 alias dev1='ssh devvm22394.prn1.facebook.com'
 alias msdev1='mosh -6 devvm22394.prn1.facebook.com'
-alias dev2='ssh dev12811.prn1.facebook.com'
+alias msdev2='mosh -6 devvm009.ftw1.facebook.com'
+alias arclint-apply-patches='arc lint --apply-patches'
 alias arcdiff='cd ~/fbsource && arc diff'
 alias arcdepends='arc detect-depends'
 alias arcpatch-s='arc newpatch --skip-dependencies'
@@ -122,8 +123,16 @@ alias openWilde='open ~/fbobjc/Apps/Wilde/Facebook/Facebook.xcworkspace'
 alias openMadMan='open ~/fbobjc/Apps/MAdMan/MAdMan.xcworkspace'
 alias openCatalyst='open ~/fbobjc/Apps/Internal/Catalyst/Catalyst.xcworkspace'
 alias openMadManE2Etests='open ~/fbobjc/EndToEndTests/Tests/MobileAdsManager/MobileAdsManager-E2ETests.xcworkspace'
+alias openMobileLab-madman='open ~/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
 alias openImportJSModules.py='subl ~/fbobjc/Libraries/FBReactKit/importStaticJSModules.py'
 
+# arc focus
+alias focus-madman-device='arc focus --buck-target adsmanager --device'
+alias focus-fbios-device='arc focus --buck-target fbios-no-extensions --device'
+
+# buck project
+alias buckproject-mobilelab-madman='buck project EndToEndTests/PerfTests/MAdMan:workspace'
+alias buckproject-mobilelab-facebook='buck project EndToEndTests/PerfTests/Facebook:workspace'
 alias buckprojectfbios='buck project fbios --without-tests'
 alias buckprojectiosmadman='buck project adsmanager --without-tests'
 alias buckprojectioscatalyst='buck project catalyst --without-tests'
@@ -134,6 +143,10 @@ alias buckiosmadman_udid='buck install -r adsmanager --udid 22935FB4-DB6C-4220-B
 alias buckiosmadmandevicearmv7="buck install -r adsmanager#iphoneos-armv7"
 alias buckiosmadmandevicearm64="buck install -r adsmanager#iphoneos-arm64"
 alias buckiosmadmandeviceproduction="buck install -r adsmanager#iphoneos-armv7 --config user.sandcastle_build_mode=production"
+alias buckiosmadman_local="buck install -r adsmanager --config user.sandcastle_build_mode=local"
+alias buckiosmadman_release="buck install -r adsmanager --config user.sandcastle_build_mode=release"
+alias buckiosmadman_development="buck install -r adsmanager --config user.sandcastle_build_mode=development"
+alias buckiosmadman_production="buck install -r adsmanager --config user.sandcastle_build_mode=production"
 alias buckandroidmadman='buck install -r adsmanager'
 alias buckiosmadman_6="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6'"
 alias buckiosmadman_6s="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s'"
@@ -180,6 +193,8 @@ alias jru_basic_only='js1 relay upgrade --basic-only'
 alias jrc_files='js1 relay check files'
 alias jrc_directory='js1 relay check directory'
 alias js_relay_build_facebook='js1 build relay --project facebook'
+alias jscmlogger='jscodeshift --parser='flow' -t ~/js-codemod/transforms/migrate-ama-logger.js'
+alias jscmama='jscodeshift --parser='flow' -t ~/js-codemod/transforms/ama-add-ama-type-annotation.js'
 alias jscodeshift_es6='jscodeshift -t ~/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=false'
 alias mc='js1 build mobile-config'
 #codemod
@@ -187,6 +202,7 @@ alias jscm-pure-component='jscodeshift -t ~/react-codemod/transforms/pure-compon
 
 # jellyfish
 alias jfrebase='jf submit --stack -m "rebase"'
+alias jfs='jf submit'
 #hg alias
 alias purge_rej='hg purge "glob:**/*.rej" --all'
 alias purge_orig='hg purge "glob:**/*.orig" --all'
@@ -196,8 +212,8 @@ alias hs='hg sl'
 alias hss='hs ssl'
 alias ht='hg st'
 alias ha='hg amend'
-alias hamend='hg amend --rebase'
-alias hfixup='hg amend --fixup'
+alias reamend='hg amend --rebase'
+alias fixamend='hg amend --fixup'
 alias hwilde="hg book --remote | grep -E ' remote/fb(android|objc)/releases/release-fb(android|ios)-[0-9]' | cut -d ' ' -f 4 | sort -r | rev | sed -e 's/-/ /' | uniq -f 1 | rev | sed -e 's/ /-/'"
 alias hgdaydiff="hg log -r 'last(::. & not date(-1))'"
 alias hg2daydiff="hg log -r 'last(::. & not date(-2))'"
@@ -213,6 +229,7 @@ alias hglog7="hg log -r 'last(::. & not date(-7))'"
 alias highlightjs="pbpaste | highlight --syntax js --style monokai --out-format rtf --font monaco --font-size 26 | pbcopy"
 alias highlightobjc="pbpaste | highlight --syntax objc --style monokai --out-format rtf --font monaco --font-size 26 | pbcopy"
 export AMA_HOME=~/fbsource/xplat/js/RKJSModules/Apps/AdsManager/
+export MOBILE_LAB_FBOBJC=~/fbobjc/EndToEndTests/PerfTests
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 #JS Pyramidion
@@ -238,4 +255,6 @@ export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools:
 export PATH=./node_modules/.bin:$PATH
 
 export NVM_DIR="/Users/wenjingw/.nvm"
+export REACT_EDITOR=atom
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+

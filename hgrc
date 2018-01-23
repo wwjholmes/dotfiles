@@ -53,3 +53,7 @@ rc = rebase --continue
 ra = rebase --abort
 sc = status --change
 
+[committemplate]
+summary = \n\n#accept2ship
+reviewers = #madman
+testplan = eyes
