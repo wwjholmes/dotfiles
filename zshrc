@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/wenjingw/.oh-my-zsh
+export REACT_EDITOR=atom
 export EDITOR=vim
 
 # Set name of the theme to load.
@@ -126,13 +127,16 @@ alias openMadManE2Etests='open ~/fbobjc/EndToEndTests/Tests/MobileAdsManager/Mob
 alias openMobileLab-madman='open ~/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
 alias openImportJSModules.py='subl ~/fbobjc/Libraries/FBReactKit/importStaticJSModules.py'
 
+#Tools
+alias fetchctscanlog='Tools/CTScan/CTScanDeviceManager -u eb1223beb0852d5a9d775a02da628e7a28d0d748 -a com.facebook.madman.internal --get /tmp/ctscan.txt ~/ctscan.txt'
+
 # arc focus
 alias focus-madman-device='arc focus --buck-target adsmanager --device'
 alias focus-fbios-device='arc focus --buck-target fbios-no-extensions --device'
 
 # buck project
-alias buckproject-mobilelab-madman='buck project EndToEndTests/PerfTests/MAdMan:workspace'
-alias buckproject-mobilelab-facebook='buck project EndToEndTests/PerfTests/Facebook:workspace'
+alias buckproject-mobilelab-madman='buck project EndToEndTests/PerfTests/MAdMan:workspace --without-tests'
+alias buckproject-mobilelab-facebook='buck project EndToEndTests/PerfTests/Facebook:workspace --without-tests'
 alias buckprojectfbios='buck project fbios --without-tests'
 alias buckprojectiosmadman='buck project adsmanager --without-tests'
 alias buckprojectioscatalyst='buck project catalyst --without-tests'
@@ -238,11 +242,11 @@ export I_JSBUDDY_HOME=$FBOBJC/EndToEndTests/Pyramdion/
 export FBANDROID=~/fbsource/fbandroid/
 export A_JSBUDDY_HOME=$FBANDROID/java/com/facebook/testing/buddy/js/
 
+# Android Emulator
+alias start_emulator='~/fbsource/fbandroid/scripts/start_emulator'
+
 # added by setup_fb4a.sh
 export FB_OBJC="~/fbsource/fbobjc"
-export ANDROID_SDK=/opt/android_sdk
-export ANDROID_NDK_REPOSITORY=/opt/android_ndk
-export ANDROID_HOME=${ANDROID_SDK}
 export FBANDROID_DIR=/Users/wenjingw/fbsource/fbandroid
 alias quicklog_update=/Users/wenjingw/fbsource/fbandroid/scripts/quicklog/quicklog_update.sh
 alias qlu=quicklog_update
