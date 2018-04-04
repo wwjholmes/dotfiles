@@ -55,7 +55,7 @@ plugins=(mercurial)
 
 # User configuration
 
-export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/wenjingw/devtools/buck/bin:/usr/local/git/bin:/usr/local/munki:/usr/local/ant/bin:/Users/wenjingw/devtools/arcanist/bin:/Users/wenjingw/devtools/buck/bin/buck:/Users/wenjingw/fbobjc-hg/Users/jsh/Verve/bin:/opt/android_sdk/tools:/opt/android_sdk/platform-tools"
+export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/wenjingw/devtools/buck/bin:/usr/local/git/bin:/usr/local/munki:/usr/local/ant/bin:/Users/wenjingw/devtools/arcanist/bin:/Users/wenjingw/devtools/buck/bin/buck:/Users/wenjingw/fbobjc-hg/Users/jsh/Verve/bin:/opt/android_sdk/tools:/opt/android_sdk/platform-tools:/opt/homebrew/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,9 +92,8 @@ alias remotePro1='sudo cperun -t chef'
 alias remotePro2='ssh -L 5901:wenjingw-pro.dhcp.thefacebook.com:5900 wenjingw@wenjingw-pro.dhcp.thefacebook.com'
 alias remotePro3='open vnc://localhost:5901'
 #alias dev1='ssh dev2064.prn2.facebook.com'
-alias dev1='ssh devvm22394.prn1.facebook.com'
-alias msdev1='mosh -6 devvm22394.prn1.facebook.com'
-alias msdev2='mosh -6 devvm009.ftw1.facebook.com'
+alias dev1='ssh devvm009.ftw1.facebook.com'
+alias msdev1='mosh -6 devvm009.ftw1.facebook.com'
 alias arclint-apply-patches='arc lint --apply-patches'
 alias arcdiff='cd ~/fbsource && arc diff'
 alias arcdepends='arc detect-depends'
@@ -120,12 +119,12 @@ alias importJSModules='~/fbobjc/Libraries/FBReactKit/importStaticJSModules.py we
 alias vpnsucks='sudo route add 192.168.56.0/24 -interface vboxnet0'
 alias ragequit='buck kill; pkill flow; watchman watch-del-all'
 
-alias openWilde='open ~/fbobjc/Apps/Wilde/Facebook/Facebook.xcworkspace'
-alias openMadMan='open ~/fbobjc/Apps/MAdMan/MAdMan.xcworkspace'
-alias openCatalyst='open ~/fbobjc/Apps/Internal/Catalyst/Catalyst.xcworkspace'
-alias openMadManE2Etests='open ~/fbobjc/EndToEndTests/Tests/MobileAdsManager/MobileAdsManager-E2ETests.xcworkspace'
-alias openMobileLab-madman='open ~/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
-alias openImportJSModules.py='subl ~/fbobjc/Libraries/FBReactKit/importStaticJSModules.py'
+alias openWilde='open ~/fbsource/fbobjc/Apps/Wilde/Facebook/Facebook.xcworkspace'
+alias openMadMan='open ~/fbsource/fbobjc/Apps/MAdMan/MAdMan.xcworkspace'
+alias openCatalyst='open ~/fbsource/fbobjc/Apps/Internal/Catalyst/Catalyst.xcworkspace'
+alias openMadManE2Etests='open ~/fbsource/fbobjc/EndToEndTests/Tests/MobileAdsManager/MobileAdsManager-E2ETests.xcworkspace'
+alias openMobileLab-madman='open ~/fbsource/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
+alias openImportJSModules.py='subl ~/fbsource/fbobjc/Libraries/FBReactKit/importStaticJSModules.py'
 
 #Tools
 alias fetchctscanlog='Tools/CTScan/CTScanDeviceManager -u eb1223beb0852d5a9d775a02da628e7a28d0d748 -a com.facebook.madman.internal --get /tmp/ctscan.txt ~/ctscan.txt'
@@ -142,7 +141,7 @@ alias buckprojectiosmadman='buck project adsmanager --without-tests'
 alias buckprojectioscatalyst='buck project catalyst --without-tests'
 alias buckprojecte2e-adsmanager='buck project e2e-adsmanager'
 alias buckcatalyst='buck install -r catalyst'
-alias buckiosmadman='buck install -r adsmanager'
+alias buckiosmadman="buck install --run adsmanager"
 alias buckiosmadman_udid='buck install -r adsmanager --udid 22935FB4-DB6C-4220-B60B-02F9AA3A0D8A'
 alias buckiosmadmandevicearmv7="buck install -r adsmanager#iphoneos-armv7"
 alias buckiosmadmandevicearm64="buck install -r adsmanager#iphoneos-arm64"
