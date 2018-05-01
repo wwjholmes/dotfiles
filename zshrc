@@ -55,7 +55,7 @@ plugins=(mercurial)
 
 # User configuration
 
-export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/wenjingw/devtools/buck/bin:/usr/local/git/bin:/usr/local/munki:/usr/local/ant/bin:/Users/wenjingw/devtools/arcanist/bin:/Users/wenjingw/devtools/buck/bin/buck:/Users/wenjingw/fbobjc-hg/Users/jsh/Verve/bin:/opt/android_sdk/tools:/opt/android_sdk/platform-tools:/opt/homebrew/bin"
+export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/wenjingw/devtools/buck/bin:/usr/local/git/bin:/usr/local/munki:/usr/local/ant/bin:/Users/wenjingw/devtools/arcanist/bin:/Users/wenjingw/devtools/buck/bin/buck:/Users/wenjingw/fbobjc-hg/Users/jsh/Verve/bin:/opt/android_sdk/tools:/opt/android_sdk/platform-tools:/opt/homebrew/bin:~/.config/yarn/global/node_modules/jscodeshift/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -196,13 +196,14 @@ alias jru_basic_only='js1 relay upgrade --basic-only'
 alias jrc_files='js1 relay check files'
 alias jrc_directory='js1 relay check directory'
 alias js_relay_build_facebook='js1 build relay --project facebook'
-alias jscmlogger='jscodeshift --parser='flow' -t ~/js-codemod/transforms/migrate-ama-logger.js'
-alias jscmama='jscodeshift --parser='flow' -t ~/js-codemod/transforms/ama-add-ama-type-annotation.js'
-alias jscodeshift_es6='jscodeshift -t ~/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=false'
 alias mc='js1 build mobile-config'
-#codemod
-alias jscm-pure-component='jscodeshift -t ~/react-codemod/transforms/pure-component.js'
 
+#codemod
+alias jshiftlogger='jscodeshift --parser='flow' -t ~/git/js-codemod/transforms/migrate-ama-logger.js'
+alias jshiftama='jscodeshift --parser='flow' -t ~/git/js-codemod/transforms/ama-add-ama-type-annotation.js'
+alias jshiftes6='jscodeshift -t ~/git/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=true'
+alias jshiftpure='jscodeshift -t ~/git/react-codemod/transforms/pure-component.js'
+alias jshiftproptypes='jscodeshift -t ~/git/react-codemod/transforms/React-PropTypes-to-prop-types.js'
 # jellyfish
 alias jfrebase='jf submit --stack -m "rebase"'
 alias jfs='jf submit'
