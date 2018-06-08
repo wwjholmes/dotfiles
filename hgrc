@@ -55,5 +55,5 @@ sc = status --change
 
 [committemplate]
 summary = \n\n#accept2ship
-reviewers = #madman
-testplan = eyes
+reviewers = sentinel 
+testplan = builds

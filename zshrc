@@ -134,27 +134,26 @@ alias focus-madman-device='arc focus --buck-target adsmanager --device'
 alias focus-fbios-device='arc focus --buck-target fbios-no-extensions --device'
 
 # buck project
-alias buckproject-mobilelab-madman='buck project EndToEndTests/PerfTests/MAdMan:workspace --without-tests'
-alias buckproject-mobilelab-facebook='buck project EndToEndTests/PerfTests/Facebook:workspace --without-tests'
-alias buckprojectfbios='buck project fbios --without-tests'
-alias buckprojectiosmadman='buck project adsmanager --without-tests'
-alias buckprojectioscatalyst='buck project catalyst --without-tests'
-alias buckprojecte2e-adsmanager='buck project e2e-adsmanager'
-alias buckcatalyst='buck install -r catalyst'
-alias buckiosmadman="buck install --run adsmanager"
-alias buckiosmadman_udid='buck install -r adsmanager --udid 22935FB4-DB6C-4220-B60B-02F9AA3A0D8A'
-alias buckiosmadmandevicearmv7="buck install -r adsmanager#iphoneos-armv7"
-alias buckiosmadmandevicearm64="buck install -r adsmanager#iphoneos-arm64"
-alias buckiosmadmandeviceproduction="buck install -r adsmanager#iphoneos-armv7 --config user.sandcastle_build_mode=production"
-alias buckiosmadman_local="buck install -r adsmanager --config user.sandcastle_build_mode=local"
-alias buckiosmadman_release="buck install -r adsmanager --config user.sandcastle_build_mode=release"
-alias buckiosmadman_development="buck install -r adsmanager --config user.sandcastle_build_mode=development"
-alias buckiosmadman_production="buck install -r adsmanager --config user.sandcastle_build_mode=production"
-alias buckandroidmadman='buck install -r adsmanager'
-alias buckiosmadman_6="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6'"
-alias buckiosmadman_6s="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s'"
-alias buckiosmadman_6plus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6 Plus'"
-alias buckiosmadman_6splus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s Plus'"
+alias bpmadman_ml='buck project EndToEndTests/PerfTests/MAdMan:workspace --without-tests'
+alias bpwilde_ml='buck project EndToEndTests/PerfTests/Facebook:workspace --without-tests'
+alias bprojectfbios='buck project fbios --without-tests'
+alias bpmadman='buck project adsmanager --without-tests'
+alias bpcatalyst='buck project catalyst --without-tests'
+alias bpmadman_e2e='buck project e2e-adsmanager'
+alias bicatelyst='buck install -r catalyst'
+alias bimadman="buck install --run adsmanager"
+#alias bimadman_udid='buck install -r adsmanager --udid 22935FB4-DB6C-4220-B60B-02F9AA3A0D8A'
+alias bimadman_devicearmv7="buck install -r adsmanager#iphoneos-armv7"
+alias bimadman_devicearm64="buck install -r adsmanager#iphoneos-arm64"
+alias bimadman_deviceproduction="buck install -r adsmanager#iphoneos-armv7 --config user.sandcastle_build_mode=production"
+alias bimadman_local="buck install -r adsmanager --config user.sandcastle_build_mode=local"
+alias bimadman_release="buck install -r adsmanager --config user.sandcastle_build_mode=release"
+alias bimadman_development="buck install -r adsmanager --config user.sandcastle_build_mode=development"
+alias bimadman_production="buck install -r adsmanager --config user.sandcastle_build_mode=production"
+alias bimadman_6="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6'"
+alias bimadman_6s="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s'"
+alias bimadman_6plus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6 Plus'"
+alias bimadman_6splus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s Plus'"
 
 alias rnios.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnios.sh'
 alias rnandroid.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnandroid.sh'
@@ -199,13 +198,18 @@ alias js_relay_build_facebook='js1 build relay --project facebook'
 alias jscmlogger='jscodeshift --parser='flow' -t ~/js-codemod/transforms/migrate-ama-logger.js'
 alias jscmama='jscodeshift --parser='flow' -t ~/js-codemod/transforms/ama-add-ama-type-annotation.js'
 alias jscodeshift_es6='jscodeshift -t ~/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=false'
-alias mc='js1 build mobile-config'
 #codemod
 alias jscm-pure-component='jscodeshift -t ~/react-codemod/transforms/pure-component.js'
 
 # jellyfish
 alias jfrebase='jf submit --stack -m "rebase"'
 alias jfs='jf submit'
+
+# mobile config
+alias mc='js1 build mobile-config'
+alias mc_ios='./Libraries/FBMobileConfig/Tools/download_definition.sh'
+alias mc_android='./scripts/mobileconfig-refresh.sh'
+
 #hg alias
 alias purge_rej='hg purge "glob:**/*.rej" --all'
 alias purge_orig='hg purge "glob:**/*.orig" --all'
