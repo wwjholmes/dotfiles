@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mercurial)
+plugins=(mercurial colored-man-pages sublime themes)
 
 # User configuration
 
@@ -86,6 +86,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vzsh="vim ~/.zshrc"
 alias szsh="source ~/.zshrc"
+alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
 alias ls='ls -G'
 alias myip='ipconfig getifaddr en0'
 alias remotePro1='sudo cperun -t chef'
