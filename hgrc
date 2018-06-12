@@ -53,6 +53,10 @@ rc = rebase --continue
 ra = rebase --abort
 sc = status --change
 
+[revsetalias]
+tbt= bisect("untested")
+tbt2 = first(tbt)+last(tbt)
+
 [committemplate]
 summary = \n\n#accept2ship
 reviewers = sentinel 
