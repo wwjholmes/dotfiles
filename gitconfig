@@ -14,8 +14,8 @@
     gr = grep -Ii
     # }}}
 # log commands {{{
-    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%C(yellow)\\ [%cn]" --decorate --date=relative
-    sl = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%C(yellow)\\ [%cn]" --decorate --date=relative
+    ls = log --pretty=format:"%C(green)%h\\ %Cred%d\\ %Creset%s%C(yellow)\\ [%cn]\\ %C(blue)[%ad]" --decorate --date=relative
+    sl= log --pretty=format:"%C(green)%h\\ %Cred%d\\ %Creset%s%C(yellow)\\ [%cn]\\ %C(blue)[%ad]" --decorate --date=relative
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(yellow)\\ [%cn]" --decorate --numstat
     lc  = "!f() { git ll "$1"^.."$1"; }; f"
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
