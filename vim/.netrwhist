@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/wenjingw/fbobjc-hg/.hg'
-let g:netrw_dirhist_2='/Users/wenjingw/.oh-my-zsh'
-let g:netrw_dirhist_3='/Users/wenjingw/.oh-my-zsh/plugins'
-let g:netrw_dirhist_4='/Users/wenjingw'
-let g:netrw_dirhist_5='/Users/wenjingw/.atom'
-let g:netrw_dirhist_6='/Users/wenjingw'
-let g:netrw_dirhist_7='/Users'
-let g:netrw_dirhist_8='/'
-let g:netrw_dirhist_9='/Users/wenjingw/.atom'
+let g:netrw_dirhist_cnt =0
