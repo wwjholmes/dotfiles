@@ -56,6 +56,7 @@ sc = status --change
 [revsetalias]
 tbt= bisect("untested")
 tbt2 = first(tbt)+last(tbt)
+upward=.::
 
 [committemplate]
 summary = \n\n#accept2ship
