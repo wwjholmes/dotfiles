@@ -52,6 +52,7 @@ cm = resolve -m
 rc = rebase --continue
 ra = rebase --abort
 sc = status --change
+now = log -r .
 
 [revsetalias]
 tbt= bisect("untested")
