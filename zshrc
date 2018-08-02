@@ -97,8 +97,9 @@ alias remotePro1='sudo cperun -t chef'
 alias remotePro2='ssh -L 5901:wenjingw-pro.dhcp.thefacebook.com:5900 wenjingw@wenjingw-pro.dhcp.thefacebook.com'
 alias remotePro3='open vnc://localhost:5901'
 #alias dev1='ssh dev2064.prn2.facebook.com'
-alias dev1='ssh devvm009.ftw1.facebook.com'
-alias msdev1='mosh -6 devvm009.ftw1.facebook.com'
+alias ssh_dev='ssh devvm009.ftw1.facebook.com'
+alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
+alias dev='mosh -6 devvm009.ftw1.facebook.com -- tmux a'
 alias arclint-apply-patches='arc lint --apply-patches'
 alias arcdiff='cd ~/fbsource && arc diff'
 alias arcdepends='arc detect-depends'
@@ -151,6 +152,7 @@ alias bimadman="buck install --run adsmanager"
 alias bimadman_devicearmv7="buck install -r adsmanager#iphoneos-armv7"
 alias bimadman_devicearm64="buck install -r adsmanager#iphoneos-arm64"
 alias bimadman_deviceproduction="buck install -r adsmanager#iphoneos-armv7 --config user.sandcastle_build_mode=production"
+alias bimadman_deviceprofile="buck install -r adsmanager#iphoneos-armv7 --config user.sandcastle_build_mode=profile"
 alias bimadman_local="buck install -r adsmanager --config user.sandcastle_build_mode=local"
 alias bimadman_release="buck install -r adsmanager --config user.sandcastle_build_mode=release"
 alias bimadman_development="buck install -r adsmanager --config user.sandcastle_build_mode=development"
