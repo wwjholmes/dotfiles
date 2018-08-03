@@ -41,3 +41,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+
+" vim-gitgutter settings
+set updatetime=100
