@@ -25,3 +25,5 @@
 
 [core]
 	pager = less -iXFR
+[branch]
+	autosetuprebase = always
