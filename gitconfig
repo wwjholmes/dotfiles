@@ -1,29 +1,58 @@
+[core]
+  editor = nano
+
 [user]
-    email = wwjholmes@gmail.com 
-    name = Wenjing Wang
+  name = wenjingw
+  email = wenjingw@fb.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
 
 [alias]
-# basic {{{
-    st = status -s
-    cl = clone
-    ci = commit
-    co = checkout
-    br = branch
-    r = reset
-    cp = cherry-pick
-    gr = grep -Ii
-    # }}}
-# log commands {{{
-    ls = log --pretty=format:"%C(green)%h\\ %Cred%d\\ %Creset%s%C(yellow)\\ [%cn]\\ %C(blue)[%ad]" --decorate --date=relative
-    sl= log --pretty=format:"%C(green)%h\\ %Cred%d\\ %Creset%s%C(yellow)\\ [%cn]\\ %C(blue)[%ad]" --decorate --date=relative
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(yellow)\\ [%cn]" --decorate --numstat
-    lc  = "!f() { git ll "$1"^.."$1"; }; f"
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-    fl = log -u
-    filelog = log -u
-    # }}}
+  br = branch -v
+  co = checkout
+  ci = commit
+  di = diff
+  st = status
+  showbr = log -U git-svn..
+  cl = clean -d -fx ""
 
-[core]
-	pager = less -iXFR
+[svn]
+  followparent = true
+
+[commit]
+  template = /mnt/vol/engshare/svnroot/admin/scripts/templates/git-commit-template.txt
+
+[log]
+  date = relative
+
+# Use only for black background terminal
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  plain = white
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red blink
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[http]
+	proxy = fwdproxy:8080
+
+[https]
+	proxy = fwdproxy:8080
+[url "https://github.com/"]
+	insteadOf = git://github.com/
 [branch]
 	autosetuprebase = always
