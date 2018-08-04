@@ -1,5 +1,6 @@
 set number
 colorscheme badwolf         " awesome colorscheme
+
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey30
 
