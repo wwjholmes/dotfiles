@@ -19,6 +19,7 @@
   st = status
   showbr = log -U git-svn..
   cl = clean -d -fx ""
+  sl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [svn]
   followparent = true
