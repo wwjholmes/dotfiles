@@ -1,5 +1,6 @@
 [core]
   editor = vim 
+	pager = less -iXFR
 
 [user]
   name = wenjingw
