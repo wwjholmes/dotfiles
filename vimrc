@@ -1,6 +1,11 @@
 set number
 colorscheme badwolf         " awesome colorscheme
 
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey30
 
