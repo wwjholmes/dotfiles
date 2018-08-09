@@ -51,7 +51,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mercurial colored-man-pages sublime themes)
+plugins=(
+  autojump
+  colored-man-pages 
+  mercurial 
+  sublime 
+  themes
+)
 
 # User configuration
 
@@ -86,43 +92,31 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vzsh="vim ~/.zshrc"
-alias szsh="source ~/.zshrc"
+alias zconfig="vim ~/.zshrc"
+alias szconfig="source ~/.zshrc"
+
+#alias ohmyzsh="mate ~/.oh-my-zsh"
 alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
 alias ls='ls -G'
+
+# dev server
 alias myip='ipconfig getifaddr en0'
-alias remotePro1='sudo cperun -t chef'
-alias remotePro2='ssh -L 5901:wenjingw-pro.dhcp.thefacebook.com:5900 wenjingw@wenjingw-pro.dhcp.thefacebook.com'
-alias remotePro3='open vnc://localhost:5901'
-#alias dev1='ssh dev2064.prn2.facebook.com'
 alias ssh_dev='ssh devvm009.ftw1.facebook.com'
 alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
 alias dev='mosh -6 devvm009.ftw1.facebook.com -- tmux a'
-alias arclint-apply-patches='arc lint --apply-patches'
-alias arcdiff='cd ~/fbsource && arc diff'
+
 alias arcdepends='arc detect-depends'
-alias arcpatch-s='arc newpatch --skip-dependencies'
-alias arcpatch-a='arc newpatch --apply-dependencies'
-alias ade='arc diff --edit'
-alias ad='arc diff'
+
+
+# Xcode clean
 alias rmderiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias duderiveddata='du -hd 0 ~/Library/Developer/Xcode/DerivedData/*'
+
 alias rmhgcache='rm -rf ~/.hgcache'
 alias duhgcache='du -hd 0 ~/.hgcache/'
-alias retrieveSchema.sh='~/xplat/graphql/retrieveSchema.sh'
-alias retrieveSchema.sh_wenjingw.sb='~/xplat/graphql/retrieveSchema.sh -s wenjingw.sb.facebook.com'
-alias update_graphql_schema.sh='./scripts/update_graphql_schema.sh'
+
+# GrahpQL schema
 alias quicklog_update='~/fbobjc/Libraries/FBReactKit/js/RKJSModules/Libraries/QuickPerformanceLogger/quicklog_update.sh'
-alias fbmogen.sh='Libraries/FBDataModel/FBDataModel/fbmogen.sh'
-alias genAnnouncers='./Tools/object-generation/exec/generateAnnouncers'
-alias genValues='./Tools/remodel/bin/generateValues'
-alias buildctscanapp='sh Tools/CTScan/BuildCTScanApp.sh'
-alias pngcrush='~/fbobjc/Tools/pngcrush/pngcrush.sh'
-alias pngcommit='~/fbobjc/Tools/pngcrush-commit.sh'
-alias importJSModules='~/fbobjc/Libraries/FBReactKit/importStaticJSModules.py wenjingw.sb.facebook.com'
-alias vpnsucks='sudo route add 192.168.56.0/24 -interface vboxnet0'
 alias ragequit='buck kill; pkill flow; watchman watch-del-all'
 
 alias openWilde='open ~/fbsource/fbobjc/Apps/Wilde/Facebook/Facebook.xcworkspace'
@@ -130,10 +124,6 @@ alias openMadMan='open ~/fbsource/fbobjc/Apps/MAdMan/MAdMan.xcworkspace'
 alias openCatalyst='open ~/fbsource/fbobjc/Apps/Internal/Catalyst/Catalyst.xcworkspace'
 alias openMadManE2Etests='open ~/fbsource/fbobjc/EndToEndTests/Tests/MobileAdsManager/MobileAdsManager-E2ETests.xcworkspace'
 alias openMobileLab-madman='open ~/fbsource/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
-alias openImportJSModules.py='subl ~/fbsource/fbobjc/Libraries/FBReactKit/importStaticJSModules.py'
-
-#Tools
-alias fetchctscanlog='Tools/CTScan/CTScanDeviceManager -u eb1223beb0852d5a9d775a02da628e7a28d0d748 -a com.facebook.madman.internal --get /tmp/ctscan.txt ~/ctscan.txt'
 
 # arc focus
 alias focus-madman-device='arc focus --buck-target adsmanager --device'
@@ -162,59 +152,37 @@ alias bimadman_6s="buck install --run adsmanager#iphonesimulator-i386 --simulato
 alias bimadman_6plus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6 Plus'"
 alias bimadman_6splus="buck install --run adsmanager#iphonesimulator-i386 --simulator-name 'iPhone 6s Plus'"
 
-alias rnios.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnios.sh'
-alias rnandroid.sh='~/fbsource/fbobjc/Libraries/FBReactKit/fbrnandroid.sh'
-alias randroid='~/fbsource/fbandroid/java/com/facebook/catalyst/runServerHere.sh'
-alias rios='~/fbsource/fbobjc/Libraries/FBReactKit/runServerHere.sh'
 alias fixiosdevicebuckbuild='sudo chmod 777 /var/db/lockdown'
 
-#fjs-fbobjc -r wenjingw.sb.facebook.com relay-fb
-alias fjs-fbobjc='~/fbobjc/Libraries/FBReactKit/js/scripts/.fjs-fbobjc.sh'
+# js1 alias
 alias jsrun='js1 run'
 alias jskill='js1 kill-all'
 alias jsrestart='js1 kill-all; js1 run'
+
 #watchman
 alias wmclear='watchman watch-del-all'
 alias rmnodemodules='rm -rf node_modules && npm install'
 alias resetpackercache='npm start -- --reset-cache'
-alias node-check-install='node ~/fbobjc/Libraries/FBReactKit/js/nodeModules.js check-install'
 
 #ama
 alias reverseadb='adb reverse tcp:8081 tcp:8081'
 alias adblogcat='adb logcat'
 alias jtadsmanager='js1 jest ~/fbsource/xplat/js/RKJSModules/Apps/AdsManager'
 alias flowmadman='flow ~/xplat/js/RKJSModules/Apps/AdsManager'
-alias flowpg='flow check ~/xplat/js/RKJSModules/Apps/Playground'
-alias cdandroidjs='cd ~/fbandroid/java/com/facebook/catalyst/js'
-alias cdiosjs='cd ~/fbobjc/Libraries/FBReactKit/js'
-alias cdrngithub='cd ~/fbobjc/Libraries/FBReactKit/js/react-native-github'
-alias updatenodemodules='node ../nodeModules.js install'
 alias wildejsdeps="~/fbsource/xplat/js/packager-cli.sh dependencies --entry-file ~/fbsource/Libraries/FBReactKit/js/RKJSModules/Apps/Wilde/WildeBundle.js --platform ios --transformer ~/fbsource/xplat/js/server/babelTransformer.js --output ~/fbobjc/wildejsdeps.txt"
 alias jsdependency="~/fbsource/xplat/js/packager-cli.sh dependencies --platform ios --transformer ~/fbsource/xplat/js/server/babelTransformer.js --output ~/fbsource/xplat/jsdeps.txt --entry-file"
 
-alias cddownstream='cd ~/fbobjc/Libraries/FBReactKit/js/RKJSModules/downstream'
-alias rmtmpdirreactpackager='rm -rf $TMPDIR/react-packager-'
-
-#js1 
-alias js1up_sb='js1 upgrade www-constants -r interngraph.wenjingw.sb.facebook.com'
-alias jru='js1 relay upgrade'
-alias jru_basic_only='js1 relay upgrade --basic-only'
-alias jrc_files='js1 relay check files'
-alias jrc_directory='js1 relay check directory'
-alias js_relay_build_facebook='js1 build relay --project facebook'
+#codemod
 alias jscmlogger='jscodeshift --parser='flow' -t ~/js-codemod/transforms/migrate-ama-logger.js'
 alias jscmama='jscodeshift --parser='flow' -t ~/js-codemod/transforms/ama-add-ama-type-annotation.js'
 alias jscodeshift_es6='jscodeshift -t ~/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=false'
-#codemod
 alias jscm-pure-component='jscodeshift -t ~/react-codemod/transforms/pure-component.js'
-alias mc='js1 build mobile-config'
-
-#codemod
 alias jshiftlogger='jscodeshift --parser='flow' -t ~/git/js-codemod/transforms/migrate-ama-logger.js'
 alias jshiftama='jscodeshift --parser='flow' -t ~/git/js-codemod/transforms/ama-add-ama-type-annotation.js'
 alias jshiftes6='jscodeshift -t ~/git/react-codemod/transforms/class.js --mixin-module-name=react-addons-pure-render-mixin --flow=true --pure-component=true --remove-runtime-proptypes=true'
 alias jshiftpure='jscodeshift -t ~/git/react-codemod/transforms/pure-component.js'
 alias jshiftproptypes='jscodeshift -t ~/git/react-codemod/transforms/React-PropTypes-to-prop-types.js'
+
 # jellyfish
 alias jfrebase='jf submit --stack -m "rebase"'
 alias jfs='jf submit'
@@ -225,15 +193,6 @@ alias mc_ios='./Libraries/FBMobileConfig/Tools/download_definition.sh'
 alias mc_android='./scripts/mobileconfig-refresh.sh'
 
 #hg alias
-alias purge_rej='hg purge "glob:**/*.rej" --all'
-alias purge_orig='hg purge "glob:**/*.orig" --all'
-alias hd='hg diff'
-alias hu='hg update'
-alias hs='hg sl'
-alias ht='hg st'
-alias ha='hg amend'
-alias reamend='hg amend --rebase'
-alias fixamend='hg amend --fixup'
 alias hwilde="hg book --remote | grep -E ' remote/fb(android|objc)/releases/release-fb(android|ios)-[0-9]' | cut -d ' ' -f 4 | sort -r | rev | sed -e 's/-/ /' | uniq -f 1 | rev | sed -e 's/ /-/'"
 alias hgdaydiff="hg log -r 'last(::. & not date(-1))'"
 alias hg2daydiff="hg log -r 'last(::. & not date(-2))'"
