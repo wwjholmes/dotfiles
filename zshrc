@@ -100,13 +100,10 @@ alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
 alias ls='ls -G'
 
 # dev server
+alias dev='ssh devvm009.ftw1.facebook.com' 
+alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
 alias myip='ipconfig getifaddr en0'
 alias ssh_dev='ssh devvm009.ftw1.facebook.com'
-alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
-alias dev='mosh -6 devvm009.ftw1.facebook.com -- tmux a'
-
-alias arcdepends='arc detect-depends'
-
 
 # Xcode clean
 alias rmderiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
@@ -125,9 +122,10 @@ alias openCatalyst='open ~/fbsource/fbobjc/Apps/Internal/Catalyst/Catalyst.xcwor
 alias openMadManE2Etests='open ~/fbsource/fbobjc/EndToEndTests/Tests/MobileAdsManager/MobileAdsManager-E2ETests.xcworkspace'
 alias openMobileLab-madman='open ~/fbsource/fbobjc/EndToEndTests/PerfTests/MAdMan/MAdManUITests.xcworkspace'
 
-# arc focus
+# arc 
 alias focus-madman-device='arc focus --buck-target adsmanager --device'
 alias focus-fbios-device='arc focus --buck-target fbios-no-extensions --device'
+alias arcdepends='arc detect-depends'
 
 # buck project
 alias bpmadman_ml='buck project EndToEndTests/PerfTests/MAdMan:workspace --without-tests'
