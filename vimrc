@@ -56,4 +56,5 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.beam$', '\.pem$']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 
 " vim-gitgutter settings
-set updatetime=100
+autocmd BufWritePost * GitGutter
+
