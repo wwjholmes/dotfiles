@@ -26,6 +26,7 @@ let g:syntastic_check_on_wq = 0
 
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
+map <C-j> :NERDTreeFind<CR>
 
 " How can I open a NERDTree automatically when vim starts up?
 " autocmd vimenter * NERDTree
