@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-erlang-skeletons"]
 	path = vim/bundle/vim-erlang-skeletons
 	url = git@github.com:vim-erlang/vim-erlang-skeletons.git
+[submodule "vim/bundle/vim-erlang-runtime"]
+	path = vim/bundle/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime
