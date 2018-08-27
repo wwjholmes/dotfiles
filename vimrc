@@ -59,3 +59,5 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 " vim-gitgutter settings
 autocmd BufWritePost * GitGutter
 
+nmap <F8> :TagbarToggle<CR>
+

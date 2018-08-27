@@ -34,3 +34,9 @@
 [submodule "vim/bundle/vim-erlang-tags"]
 	path = vim/bundle/vim-erlang-tags
 	url = git@github.com:vim-erlang/vim-erlang-tags.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "vim/bundle/erlang-motions"]
+	path = vim/bundle/erlang-motions
+	url = git@github.com:vim-erlang/erlang-motions.vim.git
