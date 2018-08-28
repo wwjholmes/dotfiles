@@ -9,6 +9,8 @@ export EDITOR=vim
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+ZSH_DISABLE_COMPFIX="true"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -100,7 +102,8 @@ alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
 alias ls='ls -G'
 
 # dev server
-alias dev='ssh devvm009.ftw1.facebook.com' 
+alias dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
+alias et_dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
 alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
 alias myip='ipconfig getifaddr en0'
 alias ssh_dev='ssh devvm009.ftw1.facebook.com'
