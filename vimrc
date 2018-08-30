@@ -1,13 +1,9 @@
 set number
 colorscheme badwolf         " awesome colorscheme
 
-
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey30
 
 " pathogen settings
 execute pathogen#infect()
@@ -61,3 +57,5 @@ autocmd BufWritePost * GitGutter
 
 nmap <F8> :TagbarToggle<CR>
 
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=darkgrey guibg=grey30
