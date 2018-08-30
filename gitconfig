@@ -17,6 +17,7 @@
   ci = commit
   di = diff
   st = status
+  bu=branch -u origin/master
   showbr = log -U git-svn..
   cl = clean -d -fx ""
   ls= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
@@ -61,5 +62,8 @@
 
 [branch]
 	autosetuprebase = always
+	autosetupmerge = always
 [pull]
 	rebase = true
+[rebase]
+	autosquash = true
