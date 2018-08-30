@@ -55,7 +55,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 " vim-gitgutter settings
 autocmd BufWritePost * GitGutter
 
+" vim tagbar settings
 nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarOpen fj<CR>
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+autocmd FileType * nested :call tagbar#autoopen(0)
 
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=darkgrey guibg=grey30
