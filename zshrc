@@ -107,6 +107,7 @@ alias et_dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
 alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
 alias myip='ipconfig getifaddr en0'
 alias ssh_dev='ssh devvm009.ftw1.facebook.com'
+alias ssh-add-github='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
 # Xcode clean
 alias rmderiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
