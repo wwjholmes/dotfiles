@@ -76,3 +76,6 @@ hi CursorLine term=bold cterm=bold ctermbg=darkgrey guibg=grey30
 
 " With the following mapping a user can press F5 to delete all trailing  whitespace. 
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+
+set rtp+=/home/wenjingw/.linuxbrew/opt/fzf
