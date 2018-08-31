@@ -79,3 +79,4 @@ nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :noh
 
 
 set rtp+=/home/wenjingw/.linuxbrew/opt/fzf
+set rtp+=/usr/local/opt/fzf
