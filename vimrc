@@ -30,8 +30,8 @@ let g:syntastic_check_on_open = 0
 "         \ "passive_filetypes": []}
 
 " nerdtree settings
-map <C-n> :NERDTreeToggle<CR>
-map <C-j> :NERDTreeFind<CR>
+noremap <C-n> :NERDTreeToggle<CR>
+noremap <C-j> :NERDTreeFind<CR>
 
 " How can I open a NERDTree automatically when vim starts up?
 " autocmd vimenter * NERDTree
@@ -65,8 +65,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 autocmd BufWritePost * GitGutter
 
 " vim tagbar settings
-nmap <F8> :TagbarToggle<CR>
-nmap <F9> :TagbarOpen fj<CR>
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F9> :TagbarOpen fj<CR>
 autocmd VimEnter * nested :call tagbar#autoopen(1)
 autocmd FileType * nested :call tagbar#autoopen(0)
 
@@ -79,6 +79,6 @@ nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :noh
 
 set rtp+=/home/wenjingw/.linuxbrew/opt/fzf
 set rtp+=/usr/local/opt/fzf
-map <C-p> :Files<CR>
+noremap <C-p> :Files<CR>
 
 let g:airline_theme='simple'
