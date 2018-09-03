@@ -239,3 +239,4 @@ export NVM_DIR="/Users/wenjingw/.nvm"
 export REACT_EDITOR=atom
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+alias sshgit='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
