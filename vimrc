@@ -17,7 +17,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-let g:airline_theme='minimallist'
 
 let g:syntastic_always_populate_loc_list = 0 
 let g:airline#extensions#whitespace#enabled = 1 
@@ -72,7 +71,7 @@ autocmd VimEnter * nested :call tagbar#autoopen(1)
 autocmd FileType * nested :call tagbar#autoopen(0)
 
 set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=darkgrey guibg=grey30
+hi CursorLine term=bold cterm=bold ctermbg=DarkBlue guibg=grey30
 
 " With the following mapping a user can press F5 to delete all trailing  whitespace. 
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
@@ -82,3 +81,4 @@ set rtp+=/home/wenjingw/.linuxbrew/opt/fzf
 set rtp+=/usr/local/opt/fzf
 map <C-p> :Files<CR>
 
+let g:airline_theme='simple'
