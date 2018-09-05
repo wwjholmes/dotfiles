@@ -2,6 +2,8 @@ let mapleader = "-"
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+" Abbreviations
+iabbrev wenjingw@ wenjingw@whatsapp.com
 set number relativenumber
 
 augroup numbertoggle
