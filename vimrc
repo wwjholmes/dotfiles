@@ -1,3 +1,35 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+syntax on
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+colorscheme badwolf         " awesome colorscheme
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jimenezrick/vimerl'
+Plugin 'vim-airline/vim-airline'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-erlang/erlang-motions.vim'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'junegunn/fzf.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 let mapleader = "-"
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -11,18 +43,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
-
-colorscheme badwolf         " awesome colorscheme
-
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-" pathogen settings
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
 
 let g:syntastic_always_populate_loc_list = 0 
 let g:airline#extensions#whitespace#enabled = 1 
