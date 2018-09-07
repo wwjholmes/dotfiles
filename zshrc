@@ -103,10 +103,12 @@ alias ls='ls -G'
 
 # dev server
 alias dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
-alias et_dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
+alias sb='et -c="tmux -CC a" -x devvm30261.prn1.facebook.com:8080'
 alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
+alias mosh_sb='mosh -6 ddevvm30261.prn1.facebook.com:8080'
 alias myip='ipconfig getifaddr en0'
 alias ssh_dev='ssh devvm009.ftw1.facebook.com'
+alias ssh_sb='ssh devvm30261.prn1.facebook.com'
 alias ssh-add-github='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
 # Xcode clean
