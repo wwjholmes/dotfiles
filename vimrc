@@ -117,3 +117,6 @@ set rtp+=/usr/local/opt/fzf
 noremap <C-p> :Files<CR>
 
 let g:airline_theme='simple'
+
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
