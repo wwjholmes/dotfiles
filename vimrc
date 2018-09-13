@@ -18,15 +18,14 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'jimenezrick/vimerl'
 Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'navicore/vissort.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'navicore/vissort.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-erlang/erlang-motions.vim'
