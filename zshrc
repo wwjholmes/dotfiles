@@ -114,14 +114,15 @@ alias szconfig="source ~/.zshrc"
 alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
 alias ls='ls -G'
 
+alias macdev='open ~/git/common/tools/scripts/MacDevSync.app'
 # dev server
-alias dev='et -c="tmux -CC a" -x devvm009.ftw1.facebook.com:8080'
-alias sb='et -c="tmux -CC a" -x devvm30261.prn1.facebook.com:8080'
-alias mosh_dev='mosh -6 devvm009.ftw1.facebook.com'
-alias mosh_sb='mosh -6 ddevvm30261.prn1.facebook.com:8080'
+alias dev='et -c="tmux -CC a" -x devvm2930.frc2.facebook.com:8080' 
+alias sb='et -c="tmux -CC a" -x devvm724.atn1.facebook.com:8098' 
+alias mosh_dev='mosh -6 devvm2930.frc2.facebook.com' 
+alias mosh_sb='mosh -6 devvm724.atn1.facebook.com' 
 alias myip='ipconfig getifaddr en0'
-alias ssh_dev='ssh devvm009.ftw1.facebook.com'
-alias ssh_sb='ssh devvm30261.prn1.facebook.com'
+alias ssh_dev='ssh devvm2930.frc2.facebook.com' 
+alias ssh_sb='ssh devvm724.atn1.facebook.com' 
 alias ssh-add-github='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
 # Xcode clean
@@ -255,3 +256,18 @@ export REACT_EDITOR=atom
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias sshgit='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
+
+export PATH=/opt/facebook/hg/bin:$PATH
+
+# PMTD trunk deploy notes START
+
+export PROJ=pmtd
+export SRC_TREE=~/git
+export MIRRORS=$SRC_TREE/server/erl/$PROJ/mirrors
+
+alias pd_ls_diffs="git log --reverse master --not stable/$PROJ -- wa/ wa_crypto/ pmtd/"
+alias pd_load_order="git log --reverse master --not stable/$PROJ -- wa/ wa_crypto/ pmtd/ | ../tools/bin/deploy_instructions.py pmtd"
+alias pd_ls_modified="git --no-pager diff --no-ext-diff --stat origin/stable/$PROJ -- wa/ wa_crypto/ $PROJ/"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
