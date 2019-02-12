@@ -7,7 +7,7 @@
 # pager =
 # progress =
 # color =
-hgext.extdiff =
+extdiff =
 
 [extdiff]
 #cmd.diffmerge = diffmerge

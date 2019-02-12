@@ -22,7 +22,13 @@
   cl = clean -d -fx ""
   ls= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
   ll= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
+  so= show --pretty="" --name-only
 
+    stash-untracked = "!f() {    \
+            git stash;               \
+            git stash -u;            \
+            git stash pop stash@{1}; \
+        }; f"
 [svn]
   followparent = true
 
@@ -67,3 +73,5 @@
 	rebase = true
 [rebase]
 	autosquash = true
+
+

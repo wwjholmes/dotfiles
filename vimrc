@@ -6,7 +6,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-colorscheme badwolf         " awesome colorscheme
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -31,6 +30,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-erlang/erlang-motions.vim'
 Plugin 'vim-erlang/vim-erlang-compiler'
 
+Plugin 'sjl/badwolf'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -39,19 +39,22 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+colorscheme badwolf         " awesome colorscheme
+
 let mapleader = "-"
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Abbreviations
 iabbrev wenjingw@ wenjingw@whatsapp.com
+" set number
 set number relativenumber
-
+ 
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+   autocmd!
+   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+ augroup END
 
 let g:syntastic_always_populate_loc_list = 0 
 let g:airline#extensions#whitespace#enabled = 1 
