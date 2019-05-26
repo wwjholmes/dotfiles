@@ -4,7 +4,7 @@
 
 [user]
   name = wenjingw
-  email = wenjingw@fb.com
+  email = wenjingw@whatsapp.com
 
 [color]
   diff = auto
@@ -12,7 +12,7 @@
   branch = auto
 
 [alias]
-  br = branch -v
+  br = branch -vv
   co = checkout
   ci = commit
   di = diff
@@ -29,6 +29,7 @@
             git stash -u;            \
             git stash pop stash@{1}; \
         }; f"
+	p = pull --rebase
 [svn]
   followparent = true
 
@@ -75,3 +76,5 @@
 	autosquash = true
 
 
+[branch "master"]
+	rebase = true
