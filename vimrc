@@ -123,3 +123,12 @@ let g:airline_theme='simple'
 
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
+
+" Following are some useful mappings to make search results appear in the middle of the screen:
+:nnoremap n nzz
+:nnoremap N Nzz
+:nnoremap * *zz
+:nnoremap # #zz
+:nnoremap g* g*zz
+:nnoremap g# g#zz
+
