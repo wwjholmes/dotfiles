@@ -1,80 +1,82 @@
 [core]
-  editor = vim 
-	pager = less -iXFR
+    editor = vim 
+    pager = less -iXFR
 
 [user]
-  name = wenjingw
-  email = wenjingw@whatsapp.com
+    name = wenjingw
+    email = wenjingw@whatsapp.com
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 
 [alias]
-  br = branch -vv
-  co = checkout
-  ci = commit
-  di = diff
-  st = status
-  bu=branch -u origin/master
-  showbr = log -U git-svn..
-  cl = clean -d -fx ""
-  ls= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
-  ll= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
-  so= show --pretty="" --name-only
+    rewind = reset --hard HEAD^
+    cp = cherry-pick
+    br = branch -vv
+    co = checkout
+    ci = commit
+    di = diff
+    st = status
+    bu=branch -u origin/master
+    showbr = log -U git-svn..
+    cl = clean -d -fx ""
+    ls= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
+    ll= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
+    so= show --pretty="" --name-only
 
     stash-untracked = "!f() {    \
-            git stash;               \
-            git stash -u;            \
-            git stash pop stash@{1}; \
+        git stash;               \
+        git stash -u;            \
+        git stash pop stash@{1}; \
         }; f"
-	p = pull --rebase
+    p = pull --rebase
 [svn]
-  followparent = true
+    followparent = true
 
 [commit]
-  template = /mnt/vol/engshare/svnroot/admin/scripts/templates/git-commit-template.txt
+    template = /home/wenjingw/.gitmessage.txt
 
 [log]
-  date = relative
+    date = relative
 
 # Use only for black background terminal
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-  plain = white
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red blink
+    plain = white
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red blink
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [http]
-	proxy = fwdproxy:8080
+    proxy = fwdproxy:8080
 
 [https]
-	proxy = fwdproxy:8080
+    proxy = fwdproxy:8080
 
 [url "https://github.com/"]
-	insteadOf = git://github.com/
+    insteadOf = git://github.com/
 
 [branch]
-	autosetuprebase = always
-	autosetupmerge = always
+    autosetuprebase = always
+    autosetupmerge = always
 [pull]
-	rebase = true
+    rebase = true
 [rebase]
-	autosquash = true
+    autosquash = true
 
 
 [branch "master"]
-	rebase = true
+    rebase = true
