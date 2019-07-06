@@ -277,3 +277,6 @@ alias pd_ls_modified="git --no-pager diff --no-ext-diff --stat origin/stable/$PR
 alias pd_make_mirror-upgrade='make --jobs=10 mirror-upgrade'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias gnn="git number --column"
+alias gn="git number"
