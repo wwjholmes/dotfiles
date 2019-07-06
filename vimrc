@@ -105,8 +105,8 @@ autocmd BufWritePost * GitGutter
 " vim tagbar settings
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F9> :TagbarOpen fj<CR>
-autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
+"autocmd VimEnter * nested :call tagbar#autoopen(1)
+"autocmd FileType * nested :call tagbar#autoopen(0)
 
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=DarkBlue guibg=grey30
@@ -132,3 +132,5 @@ autocmd BufWinEnter *.* silent loadview
 :nnoremap g* g*zz
 :nnoremap g# g#zz
 
+hi Search cterm=NONE ctermfg=red ctermbg=blue
+set hlsearch
