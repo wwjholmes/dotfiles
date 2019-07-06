@@ -69,17 +69,19 @@ ZSH_DISABLE_COMPFIX="true"
 plugins=(
   autojump
   colored-man-pages 
-  mercurial 
-  sublime 
-  themes
+  z
+  zsh-completions
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/wenjingw/devtools/buck/bin:/usr/local/git/bin:/usr/local/munki:/usr/local/ant/bin:/Users/wenjingw/devtools/arcanist/bin:/Users/wenjingw/devtools/buck/bin/buck:/Users/wenjingw/fbobjc-hg/Users/jsh/Verve/bin:/opt/android_sdk/tools:/opt/android_sdk/platform-tools:/opt/homebrew/bin:~/.config/yarn/global/node_modules/jscodeshift/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -108,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zconfig="vim ~/.zshrc"
-alias szconfig="source ~/.zshrc"
+alias sz="source ~/.zshrc"
 
 #alias ohmyzsh="mate ~/.oh-my-zsh"
 alias omzd='vim ~/.oh-my-zsh/lib/directories.zsh'
@@ -117,12 +119,15 @@ alias ls='ls -G'
 alias macdev='open ~/git/common/tools/scripts/MacDevSync.app'
 # dev server
 alias dev='et -c="tmux -CC a" -x devvm2930.frc2.facebook.com:8080' 
-alias sb='et -c="tmux -CC a" -x devvm724.atn1.facebook.com:8098' 
+#alias sb='et -c="tmux -CC a" -x devvm724.atn1.facebook.com:8098' 
+alias sb='et -c="tmux -CC a" -x devvm1957.prn3.facebook.com:8080' 
 alias mosh_dev='mosh -6 devvm2930.frc2.facebook.com' 
-alias mosh_sb='mosh -6 devvm724.atn1.facebook.com' 
+#alias mosh_sb='mosh -6 devvm724.atn1.facebook.com' 
+alias mosh_sb='mosh -6 devvm1957.prn3.facebook.com' 
 alias myip='ipconfig getifaddr en0'
 alias ssh_dev='ssh devvm2930.frc2.facebook.com' 
-alias ssh_sb='ssh devvm724.atn1.facebook.com' 
+#alias ssh_sb='ssh devvm724.atn1.facebook.com' 
+alias ssh_sb='ssh devvm1957.prn3.facebook.com'
 alias ssh-add-github='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
 # Xcode clean
@@ -260,7 +265,7 @@ alias sshgit='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 export PATH=/opt/facebook/hg/bin:$PATH
 
 # PMTD trunk deploy notes START
-
+export ECTL_HOME=~/erl
 export PROJ=pmtd
 export SRC_TREE=~/git
 export MIRRORS=$SRC_TREE/server/erl/$PROJ/mirrors
@@ -269,5 +274,6 @@ alias pd_ls_diffs="git log --reverse master --not stable/$PROJ -- wa/ wa_crypto/
 alias pd_load_order="git log --reverse master --not stable/$PROJ -- wa/ wa_crypto/ pmtd/ | ../tools/bin/deploy_instructions.py pmtd"
 alias pd_ls_modified="git --no-pager diff --no-ext-diff --stat origin/stable/$PROJ -- wa/ wa_crypto/ $PROJ/"
 
+alias pd_make_mirror-upgrade='make --jobs=10 mirror-upgrade'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
