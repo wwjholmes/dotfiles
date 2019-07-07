@@ -118,8 +118,8 @@ alias ls='ls -G'
 
 alias macdev='open ~/git/common/tools/scripts/MacDevSync.app'
 # dev server
-alias dev='et -c="tmux -CC a" -x devvm2930.frc2.facebook.com:8080' 
-alias sb='et -c="tmux -CC a" -x devvm1957.prn3.facebook.com:8080' 
+alias dev='et -c "tmux -CC a" -x devvm2930.frc2.facebook.com:8080' 
+alias sb='et -c "tmux -CC a" -x devvm1957.prn3.facebook.com:8080' 
 alias mosh_dev='mosh -6 devvm2930.frc2.facebook.com' 
 alias mosh_sb='mosh -6 devvm1957.prn3.facebook.com' 
 alias myip='ipconfig getifaddr en0'
@@ -168,3 +168,5 @@ export PATH=/opt/facebook/hg/bin:$PATH
 export PATH=/usr/local/bin/:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -s "/Users/wenjingw/.scm_breeze/scm_breeze.sh" ] && source "/Users/wenjingw/.scm_breeze/scm_breeze.sh"
