@@ -165,5 +165,6 @@ export REACT_EDITOR=atom
 alias sshgit='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
 export PATH=/opt/facebook/hg/bin:$PATH
+export PATH=/usr/local/bin/:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
