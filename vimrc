@@ -17,20 +17,20 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'navicore/vissort.vim'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-erlang/erlang-motions.vim'
 Plugin 'vim-erlang/vim-erlang-compiler'
-
-Plugin 'sjl/badwolf'
+Plugin 'vim-erlang/vim-erlang-runtime'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
