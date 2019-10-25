@@ -30,7 +30,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-erlang/erlang-motions.vim'
 Plugin 'vim-erlang/vim-erlang-compiler'
-Plugin 'vim-erlang/vim-erlang-runtime'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -134,3 +133,17 @@ autocmd BufWinEnter *.* silent loadview
 
 hi Search cterm=NONE ctermfg=red ctermbg=blue
 set hlsearch
+
+
+let repo_initial = 'wa'
+let repo_path = system('git rev-parse --show-toplevel')
+
+command! -bang -nargs=* Bg
+            \ call fzf#vim#grep(
+            \   repo_initial . 'bgs --color=on '.shellescape(<q-args>) .
+            \ '| sed "s,^[^/]*/,,"' .
+            \ '| sed "s#^#$(git rev-parse --show-toplevel)/#g"', 1,
+            \   <bang>0 ? fzf#vim#with_preview('up:60%')
+            \           : fzf#vim#with_preview('up:55%:hidden', '?'),
+            \   <bang>0)
+noremap gs :Bg <C-r><C-w><CR>
