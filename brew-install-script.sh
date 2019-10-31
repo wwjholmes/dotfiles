@@ -21,6 +21,7 @@ brew cask install iterm2
 brew cask install monodraw
 brew cask install nally
 brew cask install qq
+brew cask install sogouinput
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install tweetbot
