@@ -170,3 +170,6 @@ export PATH=/usr/local/bin/:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -s "/Users/wenjingw/.scm_breeze/scm_breeze.sh" ] && source "/Users/wenjingw/.scm_breeze/scm_breeze.sh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
