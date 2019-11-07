@@ -19,12 +19,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'navicore/vissort.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -65,36 +63,6 @@ let g:syntastic_check_on_open = 0
 "         \ "mode": "active",
 "         \ "active_filetypes": ["erl", "py"],
 "         \ "passive_filetypes": []}
-
-" nerdtree settings
-noremap <C-n> :NERDTreeToggle<CR>
-noremap <C-j> :NERDTreeFind<CR>
-
-" How can I open a NERDTree automatically when vim starts up?
-" autocmd vimenter * NERDTree
-
-" How can I open NERDTree automatically when vim starts up on opening a directory?
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" How to config custom symbols
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
-
-
-let NERDTreeIgnore=['\.vim$', '\~$', '\.beam$', '\.pem$']
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 
