@@ -17,6 +17,7 @@ brew cask install 1password
 brew cask install alfred
 brew cask install dash
 brew cask install dropbox
+brew cask install fzf
 brew cask install iterm2
 brew cask install monodraw
 brew cask install nally
