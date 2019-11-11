@@ -118,12 +118,12 @@ alias ls='ls -G'
 
 alias macdev='open ~/git/common/tools/scripts/MacDevSync.app'
 # dev server
-alias dev='et -c "tmux -CC a" -x devvm2930.frc2.facebook.com:8080' 
+alias dev='et -c "tmux -CC a" -x devvm734.atn5.facebook.com:8080' 
 alias sb='et -c "tmux -CC a" -x devvm1957.prn3.facebook.com:8080' 
-alias mosh_dev='mosh -6 devvm2930.frc2.facebook.com' 
+alias mosh_dev='mosh -6 devvm734.atn5.facebook.com' 
 alias mosh_sb='mosh -6 devvm1957.prn3.facebook.com' 
 alias myip='ipconfig getifaddr en0'
-alias ssh_dev='ssh devvm2930.frc2.facebook.com' 
+alias ssh_dev='ssh devvm734.atn5.facebook.com' 
 alias ssh_sb='ssh devvm1957.prn3.facebook.com'
 alias ssh-add-github='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa'
 
