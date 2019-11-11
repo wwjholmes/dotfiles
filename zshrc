@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/wenjingw/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 export REACT_EDITOR=atom
 export EDITOR=vim
 
