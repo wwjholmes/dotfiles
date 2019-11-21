@@ -81,8 +81,12 @@ hi CursorLine term=bold cterm=bold ctermbg=DarkBlue guibg=grey30
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 
-set rtp+=/home/wenjingw/.linuxbrew/opt/fzf
+" mac-laptop
 set rtp+=/usr/local/opt/fzf
+
+" devserver
+set rtp+=~/.fzf
+
 noremap <C-p> :Files<CR>
 noremap <C-S> :Tags<CR>
 noremap <C-S-i> :BTags<CR>
