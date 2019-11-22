@@ -32,3 +32,6 @@ env $(fwdproxy-config --format=sh curl) ~/.fzf/install
 sudo feature install et
 sudo systemctl enable --now et
 sudo systemctl status et
+
+# Build and Install Vim & YouCompleteMe 
+# https://medium.com/@chusiang/install-the-vim-8-0-and-youcompleteme-with-make-on-centos-7-4-1573ad780953
