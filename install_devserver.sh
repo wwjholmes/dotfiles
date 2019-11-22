@@ -27,3 +27,8 @@ sudo yum install autojump-zsh
 git -c http.proxy=fwdproxy:8080 clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 env $(fwdproxy-config --format=sh curl) ~/.fzf/install
+
+#Install ET on devserver
+sudo feature install et
+sudo systemctl enable --now et
+sudo systemctl status et
