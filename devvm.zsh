@@ -15,3 +15,10 @@ alias er='erlcluster'
 alias pinfo='erlcanary info pmtdev'
 alias cinfo='erlcanary info cdev'
 
+sfcon() {
+    local region="${2:-frc}"
+    local task="${3:-1}"
+    local duration="${4:-1}"
+    sf canary --version "wa.erl.pmtd:$1" --tw-job priv_"$region"/whatsapp/pmtdev --tasks $task  --duration "$duration"day 
+}
+
