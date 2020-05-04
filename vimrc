@@ -6,7 +6,14 @@ set visualbell
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
+set colorcolumn=120
 
+"disable YCM
+let g:loaded_youcompleteme = 1
+
+"https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#add-cocnvim-to-your-vims-runtimepath
+let g:coc_node_path = '/usr/local/n/versions/node/12.16.3/bin/node'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -18,6 +25,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf.vim'
@@ -30,6 +38,9 @@ Plugin 'vim-erlang/erlang-motions.vim'
 Plugin 'vim-erlang/vim-erlang-compiler'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
+Plugin 'henrik/vim-indexed-search'
+Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,7 +50,8 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme badwolf         " awesome colorscheme
+colorscheme gruvbox" awesome colorscheme
+set background=dark
 
 let mapleader = "-"
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
@@ -143,4 +155,16 @@ if exists(":Tabularize")
     vmap <Leader>a= :Tabularize /=<CR>
     nmap <Leader>a, :Tabularize /,\zs<CR>
     vmap <Leader>a, :Tabularize /,\zs<CR>
+    nmap <Leader>a:: :Tabularize /::\zs<CR>
+    vmap <Leader>a:: :Tabularize /::\zs<CR>
 endif
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+
