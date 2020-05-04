@@ -4,10 +4,6 @@
 #    tmux $TMUX_OPTIONS new-session -As auto
 #fi
 
-if [ -d "$HOME/.local/vim/bin/" ] ; then
-    PATH="$HOME/.local/vim/bin/:$PATH"
-fi
-
 alias gn='git number --column'
 alias ga='git number add'
 
