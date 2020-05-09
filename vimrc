@@ -57,6 +57,16 @@ let mapleader = "-"
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+let mapleader=','
+if exists(":Tabularize")
+    nnoremap <Leader>= :Tabularize /=<CR>
+    vnoremap <Leader>= :Tabularize /=<CR>
+    nnoremap <Leader>, :Tabularize /,\zs<CR>
+    vnoremap <Leader>, :Tabularize /,\zs<CR>
+    nnoremap <Leader>:: :Tabularize /::\zs<CR>
+    vnoremap <Leader>:: :Tabularize /::\zs<CR>
+endif
+
 " Abbreviations
 iabbrev wenjingw@ wenjingw@whatsapp.com
 " set number
@@ -148,16 +158,6 @@ autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.
 
 " reload syntax highlighting
 :noremap <Leader>f :filetype detect
-
-let mapleader=','
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a, :Tabularize /,\zs<CR>
-    vmap <Leader>a, :Tabularize /,\zs<CR>
-    nmap <Leader>a:: :Tabularize /::\zs<CR>
-    vmap <Leader>a:: :Tabularize /::\zs<CR>
-endif
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
