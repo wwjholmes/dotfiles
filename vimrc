@@ -1,11 +1,17 @@
-" Go to last file(s) if invoked without arguments.
-autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
-    \ call mkdir($HOME . "/.vim") |
-    \ endif |
-    \ execute "mksession! " . $HOME . "/.vim/Session.vim"
 
-autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
-    \ execute "source " . $HOME . "/.vim/Session.vim"
+" Go to last file(s) if invoked without arguments.
+"autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
+"    \ call mkdir($HOME . "/.vim") |
+"    \ endif |
+"    \ execute "mksession! " . $HOME . "/.vim/Session.vim"
+"
+"autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
+"    \ execute "source " . $HOME . "/.vim/Session.vim"
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,6 +58,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,7 +71,7 @@ filetype plugin indent on    " required
 colorscheme gruvbox" awesome colorscheme
 set background=dark
 
-let mapleader = "-"
+let mapleader = ","
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
@@ -112,7 +119,10 @@ nnoremap <F9> :TagbarOpen fj<CR>
 "autocmd FileType * nested :call tagbar#autoopen(0)
 
 set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=DarkBlue guibg=grey30
+hi CursorLine term=bold cterm=bold ctermbg=240  guibg=grey30
+
+set hlsearch
+hi Search cterm=NONE ctermfg=red ctermbg=240
 
 " With the following mapping a user can press F5 to delete all trailing  whitespace. 
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
@@ -134,16 +144,15 @@ autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
 
 " Following are some useful mappings to make search results appear in the middle of the screen:
-:nnoremap n nzz
-:nnoremap N Nzz
-:nnoremap * *zz
-:nnoremap # #zz
-:nnoremap g* g*zz
-:nnoremap g# g#zz
-
-hi Search cterm=NONE ctermfg=red ctermbg=blue
-set hlsearch
-
+nnoremap G Gzz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+nnoremap } }zz
+nnoremap { {zz
 
 let repo_initial = 'wa'
 let repo_path = system('git rev-parse --show-toplevel')
@@ -170,3 +179,20 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+"
+" " These `n` & `N` mappings are options. You do not have to map `n` & `N` to
+" EasyMotion.
+" " Without these mappings, `n` & `N` works fine. (These mappings just provide
+" " different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+ " Gif config
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+ "
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
