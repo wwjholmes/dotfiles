@@ -1,13 +1,3 @@
-
-" Go to last file(s) if invoked without arguments.
-"autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
-"    \ call mkdir($HOME . "/.vim") |
-"    \ endif |
-"    \ execute "mksession! " . $HOME . "/.vim/Session.vim"
-"
-"autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
-"    \ execute "source " . $HOME . "/.vim/Session.vim"
-
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -154,6 +144,9 @@ nnoremap g# g#zz
 nnoremap } }zz
 nnoremap { {zz
 
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
 let repo_initial = 'wa'
 let repo_path = system('git rev-parse --show-toplevel')
 
@@ -171,28 +164,28 @@ noremap gs :Bg <C-r><C-w><CR>
 :noremap <Leader>f :filetype detect
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnomap <silent> gd <Plug>(coc-definition)
+nnomap <silent> gy <Plug>(coc-type-definition)
+nnomap <silent> gi <Plug>(coc-implementation)
+nnomap <silent> gr <Plug>(coc-references)
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 
 " Gif config
-map  / <Plug>(easymotion-sn)
+noremap  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 "
 " " These `n` & `N` mappings are options. You do not have to map `n` & `N` to
 " EasyMotion.
 " " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " " different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+noremap  n <Plug>(easymotion-next)
+noremap  N <Plug>(easymotion-prev)
  " Gif config
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+noremap <Leader>l <Plug>(easymotion-lineforward)
+noremap <Leader>j <Plug>(easymotion-j)
+noremap <Leader>k <Plug>(easymotion-k)
+noremap <Leader>h <Plug>(easymotion-linebackward)
  "
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
