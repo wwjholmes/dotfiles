@@ -164,10 +164,10 @@ noremap gs :Bg <C-r><C-w><CR>
 :noremap <Leader>f :filetype detect
 
 " GoTo code navigation.
-nnomap <silent> gd <Plug>(coc-definition)
-nnomap <silent> gy <Plug>(coc-type-definition)
-nnomap <silent> gi <Plug>(coc-implementation)
-nnomap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
@@ -189,3 +189,7 @@ noremap <Leader>k <Plug>(easymotion-k)
 noremap <Leader>h <Plug>(easymotion-linebackward)
  "
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+
+nnoremap <leader>vc :e $MYVIMRC<cr>
+
