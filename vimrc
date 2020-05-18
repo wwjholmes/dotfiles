@@ -1,7 +1,7 @@
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -124,9 +124,9 @@ set rtp+=/usr/local/opt/fzf
 " devserver
 set rtp+=~/.fzf
 
-noremap <C-p> :Files<CR>
-noremap <C-S> :Tags<CR>
-noremap <C-S-i> :BTags<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-S> :Tags<CR>
+nnoremap <C-S-i> :BTags<CR>
 
 let g:airline_theme='simple'
 
@@ -158,10 +158,10 @@ command! -bang -nargs=* Bg
             \   <bang>0 ? fzf#vim#with_preview('up:60%')
             \           : fzf#vim#with_preview('up:55%:hidden', '?'),
             \   <bang>0)
-noremap gs :Bg <C-r><C-w><CR>
+nnoremap gs :Bg <C-r><C-w><CR>
 
 " reload syntax highlighting
-:noremap <Leader>f :filetype detect
+:nnoremap <Leader>f :filetype detect
 
 " GoTo code navigation.
 nnoremap <silent> gd <Plug>(coc-definition)
@@ -173,23 +173,22 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 
 " Gif config
-noremap  / <Plug>(easymotion-sn)
+map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 "
 " " These `n` & `N` mappings are options. You do not have to map `n` & `N` to
 " EasyMotion.
 " " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " " different highlight method and have some other features )
-noremap  n <Plug>(easymotion-next)
-noremap  N <Plug>(easymotion-prev)
+nnoremap  n <Plug>(easymotion-next)
+nnoremap  N <Plug>(easymotion-prev)
  " Gif config
-noremap <Leader>l <Plug>(easymotion-lineforward)
-noremap <Leader>j <Plug>(easymotion-j)
-noremap <Leader>k <Plug>(easymotion-k)
-noremap <Leader>h <Plug>(easymotion-linebackward)
+nnoremap <Leader>l <Plug>(easymotion-lineforward)
+nnoremap <Leader>j <Plug>(easymotion-j)
+nnoremap <Leader>k <Plug>(easymotion-k)
+nnoremap <Leader>h <Plug>(easymotion-linebackward)
  "
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-
 
 nnoremap <leader>vc :e $MYVIMRC<cr>
 
