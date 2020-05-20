@@ -91,12 +91,6 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:syntastic_auto_loc_list = 1 
 let g:syntastic_check_on_open = 0 
 "
-" let g:syntastic_check_on_wq = 0
-"     let g:syntastic_mode_map = {
-"         \ "mode": "active",
-"         \ "active_filetypes": ["erl", "py"],
-"         \ "passive_filetypes": []}
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 
 " vim-gitgutter settings
@@ -180,13 +174,13 @@ omap / <Plug>(easymotion-tn)
 " EasyMotion.
 " " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " " different highlight method and have some other features )
-nnoremap  n <Plug>(easymotion-next)
-nnoremap  N <Plug>(easymotion-prev)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
  " Gif config
-nnoremap <Leader>l <Plug>(easymotion-lineforward)
-nnoremap <Leader>j <Plug>(easymotion-j)
-nnoremap <Leader>k <Plug>(easymotion-k)
-nnoremap <Leader>h <Plug>(easymotion-linebackward)
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
  "
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
