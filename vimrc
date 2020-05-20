@@ -3,6 +3,8 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
+nnoremap <leader>vc :e $MYVIMRC<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -36,7 +38,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf.vim'
-Plugin 'majutsushi/tagbar'
 Plugin 'navicore/vissort.vim'
 Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
@@ -49,6 +50,7 @@ Plugin 'henrik/vim-indexed-search'
 Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,12 +97,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.beam,*pem     " MacOSX/Linux
 
 " vim-gitgutter settings
 autocmd BufWritePost * GitGutter
-
-" vim tagbar settings
-nnoremap <F8> :TagbarToggle<CR>
-nnoremap <F9> :TagbarOpen fj<CR>
-"autocmd VimEnter * nested :call tagbar#autoopen(1)
-"autocmd FileType * nested :call tagbar#autoopen(0)
 
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=240  guibg=grey30
@@ -184,5 +180,5 @@ map <leader>h <Plug>(easymotion-linebackward)
  "
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
-nnoremap <leader>vc :e $MYVIMRC<cr>
-
+"LeaderF mapping
+map <leader>t :LeaderfFunction<cr>
