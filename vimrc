@@ -3,8 +3,9 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
-let mapleader=","
-nnoremap <leader>vc :e $MYVIMRC<cr>
+let mapleader = ","
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 augroup comment
     autocmd!
@@ -43,22 +44,22 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'morhetz/gruvbox'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Yggdroot/LeaderF'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'henrik/vim-indexed-search'
+Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 Plugin 'junegunn/fzf.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-erlang/erlang-motions.vim'
 Plugin 'vim-erlang/vim-erlang-compiler'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'godlygeek/tabular'
-Plugin 'henrik/vim-indexed-search'
-Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'easymotion/vim-easymotion'
-Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,10 +71,6 @@ filetype plugin indent on    " required
 
 colorscheme gruvbox" awesome colorscheme
 set background=dark
-
-let mapleader = ","
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
 
 let mapleader=','
 if exists(":Tabularize")
