@@ -3,7 +3,9 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
+let mapleader=","
 nnoremap <leader>vc :e $MYVIMRC<cr>
+
 augroup comment
     autocmd!
     let maplocalleader = ","
@@ -12,19 +14,18 @@ augroup comment
     autocmd FileType erlang     nnoremap <buffer> <localleader>c I% <esc>
 augroup END
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 
-set visualbell
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
 set colorcolumn=120
+set expandtab
+set shiftwidth=4
+set smartindent
+set tabstop=4
+set visualbell
 
 "disable YCM
 let g:loaded_youcompleteme = 1
@@ -46,7 +47,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf.vim'
-Plugin 'navicore/vissort.vim'
 Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
