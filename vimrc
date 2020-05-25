@@ -4,6 +4,14 @@ nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
 nnoremap <leader>vc :e $MYVIMRC<cr>
+augroup comment
+    autocmd!
+    let maplocalleader = ","
+    autocmd FileType javascript nnoremap <buffer> <localleader>c I// <esc>
+    autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
+    autocmd FileType erlang     nnoremap <buffer> <localleader>c I% <esc>
+augroup END
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
