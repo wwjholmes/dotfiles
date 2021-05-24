@@ -32,7 +32,7 @@ set visualbell
 let g:loaded_youcompleteme = 1
 
 "https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#add-cocnvim-to-your-vims-runtimepath
-let g:coc_node_path = '/usr/local/n/versions/node/12.16.3/bin/node'
+"let g:coc_node_path = '/usr/local/n/versions/node/12.16.3/bin/node'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
