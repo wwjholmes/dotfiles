@@ -26,9 +26,6 @@ rm -rf fonts
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# [autojump] Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember to source the file to update your current session):
-# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-sudo yum install autojump-zsh
 
 #FZF
 git -c http.proxy=fwdproxy:8080 clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -43,3 +40,9 @@ sudo systemctl status et
 
 # Build and Install Vim & YouCompleteMe 
 # https://medium.com/@chusiang/install-the-vim-8-0-and-youcompleteme-with-make-on-centos-7-4-1573ad780953
+
+# [autojump] Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember to source the file to update your current session):
+# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+#  sudo yum install autojump-zsh
+# Note: use dnf insated yum on devserver
+sudo dnf install autojump
