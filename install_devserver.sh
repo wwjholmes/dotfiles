@@ -45,4 +45,4 @@ sudo systemctl status et
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 #  sudo yum install autojump-zsh
 # Note: use dnf insated yum on devserver
-sudo dnf install autojump
+sudo dnf install autojump-zsh
