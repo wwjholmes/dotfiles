@@ -44,22 +44,17 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Yggdroot/LeaderF'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'godlygeek/tabular'
 Plugin 'henrik/vim-indexed-search'
-Plugin 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'sjl/badwolf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-erlang/erlang-motions.vim'
-Plugin 'vim-erlang/vim-erlang-compiler'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
