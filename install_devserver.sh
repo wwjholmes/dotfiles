@@ -1,3 +1,7 @@
+# You need to install ttls_fwdproxy on your dev server otherwise curl won't work with fwdproxy:
+# https://www.internalfb.com/intern/wiki/Development_Environment/zsh/#oh-my-zsh
+sudo feature install ttls_fwdproxy
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
