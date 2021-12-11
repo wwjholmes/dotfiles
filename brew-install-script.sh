@@ -9,26 +9,24 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Installing brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing cask"
-brew tap homebrew/cask-cask
+echo "Install daily work softwares"
 
-# Install daily work softwares
-brew cask install 1password
-brew cask install alfred
-brew cask install dash
-brew cask install dropbox
-brew cask install fzf
-brew cask install iterm2
-brew cask install monodraw
-brew cask install nally
-brew cask install qq
-brew cask install sogouinput
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install tweetbot
-brew cask install wechat
-brew cask install whatsapp
-brew cask install xscope
+#brew install 1password
+brew install alfred
+#brew install dash
+brew install dropbox
+brew install fzf
+brew install iterm2
+brew install monodraw
+brew install nally
+#brew install qq
+brew install sogouinput
+brew install spectacle
+#brew install sublime-text
+brew install tweetbot
+brew install wechat
+brew install whatsapp
+#brew install xscope
 
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
