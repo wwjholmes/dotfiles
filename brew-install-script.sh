@@ -11,6 +11,7 @@ echo "Installing brew..."
 
 echo "Install daily work softwares"
 
+brew install mosh
 #brew install 1password
 brew install alfred
 #brew install dash
