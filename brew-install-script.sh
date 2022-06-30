@@ -11,23 +11,22 @@ echo "Installing brew..."
 
 echo "Install daily work softwares"
 
-brew install mosh
+#brew install mosh
 #brew install 1password
 brew install alfred
 #brew install dash
-brew install dropbox
+#brew install dropbox
 brew install fzf
 brew install iterm2
-brew install monodraw
-brew install nally
+#brew install monodraw
+#brew install nally
 #brew install qq
 brew install sogouinput
 brew install spectacle
 #brew install sublime-text
-brew install tweetbot
 brew install wechat
-brew install whatsapp
 #brew install xscope
+brew install autojump
 
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
