@@ -3,9 +3,9 @@
     pager = less -iXFR
 
 # global settings
-[user]
-    name = Wenjing Wang 
-    email = wenjing@squareup.com
+#[user]
+#    name = Wenjing Wang 
+#    email = wenjing@squareup.com
 
 #[user]
 #    name = wwjholmes
