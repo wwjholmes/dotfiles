@@ -2,9 +2,14 @@
     editor = vim 
     pager = less -iXFR
 
+# global settings
 [user]
     name = Wenjing Wang 
     email = wenjing@squareup.com
+
+#[user]
+#    name = wwjholmes
+#    email = wwjholmes@gmail.com
 
 [color]
     diff = auto
