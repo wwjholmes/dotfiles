@@ -3,8 +3,8 @@
     pager = less -iXFR
 
 [user]
-    name = wwjholmes 
-    email = wwjholmes@gmail.com
+    name = Wenjing Wang 
+    email = wenjing@squareup.com
 
 [color]
     diff = auto
