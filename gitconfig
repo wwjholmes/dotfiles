@@ -85,3 +85,5 @@
 
 [branch "master"]
     rebase = true
+[init]
+	defaultBranch = main
