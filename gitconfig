@@ -12,6 +12,7 @@
 #    email = wwjholmes@gmail.com
 
 [color]
+    interactive = auto
     diff = auto
     status = auto
     branch = auto
@@ -41,7 +42,7 @@
     followparent = true
 
 [commit]
-    template = /home/wenjingw/.gitmessage.txt
+	template = /Users/wenjing/.gitmessage.txt
 
 [log]
     date = relative
@@ -85,3 +86,8 @@
 
 [branch "master"]
     rebase = true
+[init]
+	defaultBranch = main
+[user]
+	name = Wenjing Wang
+	email = wenjing@squareup.com
