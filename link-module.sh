@@ -15,7 +15,7 @@ link_file() {
     local source="$dir/$source_name"
     local target="$HOME/$target_name"
 
-    if [ ! -f "$source" ]; then
+    if [ ! -f "$source" ] && [ ! -d "$source" ]; then
         echo_warn "$source_name not found, skipping."
         return
     fi
@@ -46,10 +46,7 @@ case $1 in
     vim)
         echo_info "Linking Vim module..."
         link_file "vimrc" ".vimrc"
-        # Optional: Link vim folder if it exists
-        if [ -d "$dir/vim" ]; then
-            link_file "vim" ".vim"
-        fi
+        link_file "vim" ".vim"
         echo_success "Vim module linked!"
         ;;
     zsh)

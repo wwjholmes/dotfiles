@@ -110,3 +110,6 @@
 #[user]
 #    name = Wenjing Wang
 #    email = wwjholmes@gmail.com
+[user]
+	name = wwjholmes
+	email = wwjholmes@gmail.com
