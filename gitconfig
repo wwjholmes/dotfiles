@@ -1,134 +1,91 @@
-[include]
-	path = ~/Development/config_files/square/gitconfig
-# Below this line are some defaults for friendly git behavior. Feel free to
-# alter or remove them.
 [push]
-	config = default
-	default = current
+    config = default
+    default = current
 [diff]
-	renames = true
-	indentHeuristic = on
+    renames = true
+    indentHeuristic = on
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
 [merge]
-	summary = true
-	conflictstyle = diff3
+    summary = true
+    conflictstyle = diff3
 [rebase]
-	autosquash = true
-	autostash = true
+    autosquash = true
+    autostash = true
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-[alias]
-	c = commit -m
-	a = add
-	di = diff
-	dic = diff --cached
-	pl = pull
-	ps = push
-	plre = pull --rebase
-	s = status
-	st = status
-	out = log origin..HEAD
-	ci = commit
-	co = checkout
-	cp = cherry-pick
-	b = branch
-	changed = diff --name-status -r
-	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-	au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-	ch = diff --name-status -r
-	cosu = !sh -c 'git checkout $0 && git submodule update --init'
-	ignored = "!git ls-files --others --exclude-standard"
-	lg = log --all --graph --abbrev-commit --date=relative --pretty=format:'%C(bold blue)%h - %C(reset)%C(green)(%ar)%C(reset) - %s %C(dim)- %an%C(reset)%C(yellow)%d'
-	lgb = log --graph --abbrev-commit --date=relative --pretty=format:'%C(bold blue)%h - %C(reset)%C(green)(%ar)%C(reset) - %s %C(dim)- %an%C(reset)%C(yellow)%d'
-	track = !sh -c 'git branch --track "$0" "origin/$0" && git checkout "$0"'
-	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
-	touchdown = merge --no-ff
-	integrate = merge --no-ff
-	td = merge --no-ff
-	lastauthor = log -1 --format='%Cgreen%an <%ae>'
-	reauthor = commit --amend --reset-author -C HEAD
-	publish = push -u
-	tree = log --graph --decorate --pretty=oneline --abbrev-commit
-	hist = log --pretty=format:\"%C(yellow)%h %ad%Creset | %s%C(bold red)%d%Creset [%C(bold blue)%an%Creset]\" --graph --date=short
-	cleanup-branches = !sh -c 'git branch --merged | grep -v ^* | xargs -n 1 git branch -d'
-	pf = push --force-with-lease
-	nit = commit --amend --no-edit
-	praise = blame
-	git = !exec git
-	lb = branch -v --sort=committerdate
-[rerere]
-	enabled = 1
-[pull]
-	rebase = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[log]
-	mailmap = true
-[init]
-	defaultBranch = main
-[core]
-    editor = vim 
-    pager = less -iXFR
-
-# global settings
-#[user]
-#    name = Wenjing Wang 
-#    email = wenjing@squareup.com
-
-#[user]
-#    name = wwjholmes
-#    email = wwjholmes@gmail.com
-
-[color]
-    interactive = auto
     diff = auto
     status = auto
     branch = auto
-
+    interactive = auto
 [alias]
+    # Basic shortcuts
+    c = commit -m
+    a = add
+    di = diff
+    dic = diff --cached
+    pl = pull
+    ps = push
+    plre = pull --rebase
+    s = status
+    st = status
+    ci = commit
+    co = checkout
+    cp = cherry-pick
+    b = branch
     amend = commit --amend
     rewind = reset --hard HEAD^
-    cp = cherry-pick
     br = branch -vv
-    co = checkout
-    ci = commit
-    di = diff
-    st = status
-    bu=branch -u origin/master
-    showbr = log -U git-svn..
-    cl = clean -d -fx ""
-    ls= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
-    ll= log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
-    so= show --pretty="" --name-only
-
+    
+    # Advanced / Fancy Aliases
+    out = log origin..HEAD
+    changed = diff --name-status -r
+    ch = diff --name-status -r
+    cosu = !sh -c 'git checkout $0 && git submodule update --init'
+    ignored = "!git ls-files --others --exclude-standard"
+    
+    # Logging
+    lg = log --all --graph --abbrev-commit --date=relative --pretty=format:'%C(bold blue)%h - %C(reset)%C(green)(%ar)%C(reset) - %s %C(dim)- %an%C(reset)%C(yellow)%d'
+    lgb = log --graph --abbrev-commit --date=relative --pretty=format:'%C(bold blue)%h - %C(reset)%C(green)(%ar)%C(reset) - %s %C(dim)- %an%C(reset)%C(yellow)%d'
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    hist = log --pretty=format:\"%C(yellow)%h %ad%Creset | %s%C(bold red)%d%Creset [%C(bold blue)%an%Creset]\" --graph --date=short
+    ls = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit
+    ll = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
+    
+    # Utility
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    lastauthor = log -1 --format='%Cgreen%an <%ae>'
+    reauthor = commit --amend --reset-author -C HEAD
+    publish = push -u
+    cleanup-branches = !sh -c 'git branch --merged | grep -v ^* | xargs -n 1 git branch -d'
+    pf = push --force-with-lease
+    nit = commit --amend --no-edit
+    praise = blame
+    lb = branch -v --sort=committerdate
+    so = show --pretty="" --name-only
     stash-untracked = "!f() {    \
         git stash;               \
         git stash -u;            \
         git stash pop stash@{1}; \
         }; f"
-    p = pull --rebase
-[svn]
-    followparent = true
 
-[commit]
-	template = /Users/wenjing/.gitmessage.txt
-
+[rerere]
+    enabled = 1
+[pull]
+    rebase = true
+[init]
+    defaultBranch = main
+[core]
+    editor = vim 
+    pager = less -iXFR
 [log]
     date = relative
+    mailmap = true
 
 # Use only for black background terminal
 [color "branch"]
     current = yellow reverse
     local = yellow
     remote = green
-
 [color "diff"]
     plain = white
     meta = yellow bold
@@ -136,34 +93,20 @@
     old = red bold
     new = green bold
     whitespace = red blink
-
 [color "status"]
     added = yellow
     changed = green
     untracked = cyan
 
-[http]
-	#proxy = fwdproxy:8080
-
-[https]
-	#proxy = fwdproxy:8080
-
 [url "https://github.com/"]
-	insteadOf = git://github.com/
+    insteadOf = git://github.com/
 
 [branch]
     autosetuprebase = always
     autosetupmerge = always
-[pull]
-    rebase = true
 [rebase]
     autosquash = true
 
-
-[branch "master"]
-    rebase = true
-[init]
-	defaultBranch = main
-[user]
-	name = Wenjing Wang
-	email = wenjing@squareup.com
+#[user]
+#    name = Wenjing Wang
+#    email = wwjholmes@gmail.com
