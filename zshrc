@@ -7,7 +7,7 @@ export EDITOR=vim
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
@@ -95,7 +95,7 @@ export PATH="/opt/facebook/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Use
 
 
 # [autojump] Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember to source the file to update your current session):
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
